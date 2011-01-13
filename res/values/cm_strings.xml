@@ -183,4 +183,8 @@
 
     <!-- Status bar -->
     <string name="status_bar_title">Status bar</string>
+
+    <!-- Hostname setting -->
+    <string name="device_hostname">Device hostname</string>
+
 </resources>
