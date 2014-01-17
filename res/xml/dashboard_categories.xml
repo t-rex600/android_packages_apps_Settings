@@ -277,7 +277,7 @@
         <!-- SuperSU -->
         <dashboard-tile
                 android:id="@+id/supersu_settings"
-                android:icon="@drawable/ic_settings_supersu"
+                android:icon="@drawable/ic_settings_supersu_teal"
                 android:title="@string/supersu_title">
                 <intent
                     android:action="android.intent.action.MAIN"
