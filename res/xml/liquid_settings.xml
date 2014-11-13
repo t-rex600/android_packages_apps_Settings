@@ -11,5 +11,10 @@
     <PreferenceCategory
         android:key="category_liquid_personalization"
         android:title="@string/liquid_menu_personalizaton" >
+
+    <PreferenceScreen
+        android:id="@+id/button_settings"
+        android:title="@string/button_pref_title"
+        android:fragment="com.android.settings.ButtonSettings" />
 </PreferenceCategory>
 </PreferenceScreen>
