@@ -87,7 +87,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_LIQUID_SHARE = "share";
-    private static final String KEY_LIQUIDSMOOTH_UPDATES = "liquidsmooth_updates";
 
     static final int TAPS_TO_BE_A_DEVELOPER = 1;
 
@@ -143,13 +142,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         // Dont show feedback option if there is no reporter.
         if (TextUtils.isEmpty(getFeedbackReporterPackage(getActivity()))) {
             getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_FEEDBACK));
-        }
-
-        // Only the owner should see the Updater settings, if it exists
-        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
-            removePreferenceIfPackageNotInstalled(findPreference(KEY_LIQUIDSMOOTH_UPDATES));
-        } else {
-            getPreferenceScreen().removePreference(findPreference(KEY_LIQUIDSMOOTH_UPDATES));
         }
 
         /*
