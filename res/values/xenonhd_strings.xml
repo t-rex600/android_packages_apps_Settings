@@ -18,4 +18,10 @@
     <string name="changelog_crdroid_title">Changelog</string>
     <string name="changelog_crdroid_error">Unable to load changelog</string>
 
+    <string name="header_category_personalization">Personalization</string>
+
+    <!-- Miscellaneous settings -->
+    <string name="misc_settings_title">Miscellaneous</string>
+    <string name="header_category_personalization">Personalization</string>
+
 </resources>
