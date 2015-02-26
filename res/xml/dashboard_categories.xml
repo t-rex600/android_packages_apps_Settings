@@ -89,12 +89,16 @@
                     android:targetClass="com.lovejoy777.rroandlayersmanager.menu" />
         </dashboard-tile>
 
+        <!-- Kernel Auditor App -->
         <dashboard-tile
-                android:id="@+id/button_settings"
-                android:title="@string/button_pref_title"
-                android:fragment="com.android.settings.ButtonSettings"
-                android:icon="@drawable/ic_settings_home"
-                />
+                android:id="@+id/kernel_auditor"
+                android:icon="@drawable/ic_liquid_performance_teal"
+                android:title="@string/performance_settings">
+                <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="com.grarak.kerneladiutor"
+                    android:targetClass="com.grarak.kerneladiutor.MainActivity" />
+        </dashboard-tile>
 
         <!-- Home -->
         <dashboard-tile
