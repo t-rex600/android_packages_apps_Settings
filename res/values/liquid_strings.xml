@@ -24,4 +24,7 @@
     <!-- Download Center -->
     <string name="liquid_menu_about">Download Center</string>
 
-</resources>
+    <!-- Kernel Auditor  -->
+    <string name="performance_settings">Performance</string>
+
+ </resources>
