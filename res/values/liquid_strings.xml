@@ -30,6 +30,9 @@
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers">Layers</string>
 
+    <!-- Kernel Auditor  -->
+    <string name="performance_settings">Performance</string>
+
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>
