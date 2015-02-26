@@ -29,4 +29,8 @@
 
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers">Layers</string>
-</resources>
+
+    <!-- Kernel Auditor  -->
+    <string name="performance_settings">Performance</string>
+
+ </resources>
