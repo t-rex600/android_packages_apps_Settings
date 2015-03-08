@@ -1610,4 +1610,16 @@
     <string name="wifi_country_zm">Zambia</string>
     <string name="wifi_country_zw">Zimbabwe</string>
 
+    <!-- Download Center -->
+    <string name="download_category">Download Center</string>
+    <string name="download_category_summary">Find all of your support needs inside</string>
+    <string name="rom_category">Rom Download</string>
+    <string name="gapps_category">Addon Packages</string>
+    <string name="lsgapps_title">LiquidDark Gapps</string>
+    <string name="lsgapps_summary">The Gapps are generally recommended Gapps for use on LiquidDark</string>
+    <string name="ls_nightly_title">LiquidDark Builds</string>
+    <string name="ls_nightly_summary">Link for Builds</string>
+    <string name="pagapps_title">SuperSU Download</string>
+    <string name="pagapps_summary">SuperSU allows for advanced management of Superuser access rights for all the apps on your device</string>
+
 </resources>
