@@ -1619,7 +1619,7 @@
     <string name="lsgapps_summary">The Gapps are generally recommended Gapps for use on LiquidDark</string>
     <string name="ls_nightly_title">LiquidDark Builds</string>
     <string name="ls_nightly_summary">Link for Builds</string>
-    <string name="pagapps_title">SuperSU Download</string>
-    <string name="pagapps_summary">SuperSU allows for advanced management of Superuser access rights for all the apps on your device</string>
+    <string name="pagapps_title">RRO Layers Download</string>
+    <string name="pagapps_summary">xda-developers Official MEGA RRO Layers Overlays Collection</string>
 
 </resources>
