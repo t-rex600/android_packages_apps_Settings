@@ -85,6 +85,7 @@
                 android:id="@+id/manufacturer_settings">
             <intent android:action="com.android.settings.MANUFACTURER_APPLICATION_SETTING" />
         </dashboard-tile>
+
     </dashboard-category>
 
 	<!-- Personalization -->
