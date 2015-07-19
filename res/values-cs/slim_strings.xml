@@ -43,7 +43,7 @@
   <string name="privacy_guard_advanced_settings_title">Pokočilé</string>
   <string name="privacy_guard_notification_title">Upozornění</string>
   <string name="privacy_guard_notifiation_summary">Zobrazit upozornění pokud je Ochrana soukromí aktivní.</string>
-  <string name="slim_version_title">Slim verze</string>
+  <string name="slim_version_title">Liquid verze</string>
   <string name="slim_version_default">Neznámá</string>
   <string name="build_date">Datum sestavení</string>
   <string name="build_date_default">Neznámé</string>

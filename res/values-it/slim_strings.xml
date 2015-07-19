@@ -43,7 +43,7 @@
   <string name="privacy_guard_advanced_settings_title">Avanzate</string>
   <string name="privacy_guard_notification_title">Notifica</string>
   <string name="privacy_guard_notifiation_summary">Mostra una notifica se Privacy Guard è attivo.</string>
-  <string name="slim_version_title">Versione Slim</string>
+  <string name="slim_version_title">Versione Liquid</string>
   <string name="slim_version_default">Sconosciuto</string>
   <string name="build_date">Data della build</string>
   <string name="build_date_default">Sconosciuto</string>

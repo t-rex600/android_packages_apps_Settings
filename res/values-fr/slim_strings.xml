@@ -44,7 +44,7 @@
   <string name="privacy_guard_notification_title">Notification</string>
   <string name="privacy_guard_notifiation_summary">Afficher une notification lorsque la protection des données est active.</string>
   <string name="slim_shortcut_picker">Actions Slim</string>
-  <string name="slim_version_title">Version Slim</string>
+  <string name="slim_version_title">Version Liquid</string>
   <string name="slim_version_default">Inconnu</string>
   <string name="build_date">Date de compilation</string>
   <string name="build_date_default">Inconnu</string>

@@ -43,7 +43,7 @@
   <string name="privacy_guard_advanced_settings_title">Zaawansowane</string>
   <string name="privacy_guard_notification_title">Powiadomienia</string>
   <string name="privacy_guard_notifiation_summary">Pokazuj powiadomienia kiedy kontrola prywatności jest włączona.</string>
-  <string name="slim_version_title">Wersja Slim</string>
+  <string name="slim_version_title">Wersja Liquid</string>
   <string name="slim_version_default">Nieznana</string>
   <string name="build_date">Data kompilacji</string>
   <string name="build_date_default">Nieznana</string>

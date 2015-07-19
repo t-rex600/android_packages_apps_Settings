@@ -38,7 +38,7 @@ Ez problémákat okozhat némelyik alkalmazásnál.</string>
   <string name="privacy_guard_advanced_settings_title">Speciális beállítások</string>
   <string name="privacy_guard_notification_title">Értesítés</string>
   <string name="privacy_guard_notifiation_summary">Mutassa az értesítést, ha a privacy guard aktív.</string>
-  <string name="slim_version_title">Slim verzió</string>
+  <string name="slim_version_title">Liquid verzió</string>
   <string name="slim_version_default">Ismeretlen</string>
   <string name="build_date">Készítés dátuma</string>
   <string name="build_date_default">Ismeretlen</string>

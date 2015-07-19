@@ -44,7 +44,7 @@
   <string name="privacy_guard_notification_title">Notificação</string>
   <string name="privacy_guard_notifiation_summary">Mostrar notificação se a proteção à privacidade estiver ativa.</string>
   <string name="slim_shortcut_picker">Ações da Slim</string>
-  <string name="slim_version_title">Versão Slim</string>
+  <string name="slim_version_title">Versão Liquid</string>
   <string name="slim_version_default">Desconhecido</string>
   <string name="build_date">Data da compilação</string>
   <string name="build_date_default">Desconhecido</string>

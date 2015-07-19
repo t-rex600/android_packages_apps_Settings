@@ -43,7 +43,7 @@
   <string name="privacy_guard_advanced_settings_title">Дополнительно</string>
   <string name="privacy_guard_notification_title">Уведомление</string>
   <string name="privacy_guard_notifiation_summary">Показывать уведомление, если защита личных данных включена.</string>
-  <string name="slim_version_title">Версия Slim</string>
+  <string name="slim_version_title">Версия Liquid</string>
   <string name="slim_version_default">Неизвестно</string>
   <string name="build_date">Дата сборки</string>
   <string name="build_date_default">Неизвестно</string>
