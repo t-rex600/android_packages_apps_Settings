@@ -31,7 +31,7 @@
     <string name="additional_options_title">Additional options</string>
 
     <!-- LiquidSmooth Settings -->
-    <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
+    <string name="display_category_liquid_options_title">Liquid Options</string>
     <string name="equalizer_settings_title">Equalizer</string>
     <string name="misc_settings_title">Misc</string>
     <string name="interface_settings_title">Interface</string>
@@ -40,7 +40,7 @@
     <string name="performance_settings">Performance</string>
     <string name="statusbar_settings_title">Status bar</string>
     <string name="notification_settings_title">Notifications</string>
-    <string name="liquid_settings_title">LiquidSmooth</string>
+    <string name="liquid_settings_title">Liquid</string>
     <string name="advanced_options_title">Advanced options</string>
     <string name="advanced_category_title">Advanced</string>
 
@@ -1101,8 +1101,8 @@
     <string name="chamber_title">Chamber of secrets</string>
     <string name="chamber_toast">The chamber of secrets has opened</string>
 
-    <!-- LiquidSmooth Settings -->
-    <string name="display_category_liquid_options_title">LiquidSmooth Options</string>
+    <!-- Liquid Settings -->
+    <string name="display_category_liquid_options_title">Liquid Options</string>
     <string name="equalizer_settings_title">Equalizer</string>
     <string name="interface_settings_title">Interface</string>
     <string name="lockscreen_settings_title">Lock screen</string>
@@ -1110,13 +1110,13 @@
     <string name="statusbar_settings_title">Status bar</string>
     <string name="notification_settings_title">Notifications</string>
 
-    <!-- Share LiquidSmooth -->
-    <string name="share_liquid_title">Share LiquidSmooth</string>
-    <string name="share_liquid_summary">Let others know about LiquidSmooth</string>
-    <string name="share_message">Check out what #LiquidSmooth is all about @ http://goo.gl/Cuwv18</string>
-    <string name="share_chooser_title">Share LiquidSmooth</string>
+    <!-- Share Liquid -->
+    <string name="share_liquid_title">Share LiquidDark</string>
+    <string name="share_liquid_summary">Let others know about LiquidDark</string>
+    <string name="share_message">Check out what #LiquidDark is all about @ http://goo.gl/r6WCPZ</string>
+    <string name="share_chooser_title">Share LiquidDark</string>
 
-    <!-- LiquidSmooth About Phone entries -->
+    <!-- Liquid About Phone entries -->
     <string name="device_legal_summary">Open source and Google licenses</string>
     <string name="lsextrainfo">Extra information</string>
     <string name="lsextrainfo_summary">Display extra info for cpu, display, etc</string>
