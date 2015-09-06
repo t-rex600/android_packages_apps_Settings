@@ -623,7 +623,7 @@
         <item>2</item>
         <item>3</item>
     </string-array>
-    
+
     <string-array name="shortcut_action_entries">
         <item>@string/shortcut_action_back</item>
         <item>@string/shortcut_action_app</item>
