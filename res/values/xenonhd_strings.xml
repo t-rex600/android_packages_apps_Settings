@@ -68,4 +68,9 @@
     <!-- Status bar | Brightness control -->
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+
+    <!-- Force expand notifications -->
+    <string name="notification_drawer_title">Notification drawer</string>
+    <string name="notification_force_expand_title">Force expanded notification</string>
+    <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it</string>
 </resources>
