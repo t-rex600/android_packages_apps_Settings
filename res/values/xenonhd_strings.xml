@@ -24,4 +24,8 @@
     <string name="misc_settings_title">Miscellaneous</string>
     <string name="header_category_personalization">Personalization</string>
 
+    <!-- Status bar | Brightness control -->
+    <string name="status_bar_toggle_brightness">Brightness control</string>
+    <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding across the status bar</string>
+
 </resources>
