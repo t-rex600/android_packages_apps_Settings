@@ -94,7 +94,6 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.util.DisplayMetrics;
 import android.view.DisplayInfo;
-import android.view.Surface;
 import android.view.WindowManager;
 import android.widget.ListView;
 import android.widget.TabWidget;
@@ -1379,6 +1378,24 @@ public final class Utils {
                 break;
         }
         activity.setRequestedOrientation(frozenRotation);
+    }
+
+    public static Context createPackageContext(Context context, String packageName) {
+        try {
+            return context.createPackageContext(packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            // fall through
+        }
+        return null;
+    }
+
+    public static Drawable getNamedDrawable(Context context, String name) {
+        if (context == null) {
+            return null;
+        }
+        final Resources res = context.getResources();
+        final int resId = res.getIdentifier(name, "drawable", context.getPackageName());
+        return resId > 0 ? res.getDrawable(resId) : null;
     }
 
     /**
