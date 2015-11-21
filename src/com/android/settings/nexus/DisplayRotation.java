@@ -1,6 +1,5 @@
 /*
  * Copyright (C) 2012 The CyanogenMod Project
- * Copyright (C) 2014 SlimRoms Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -15,23 +14,22 @@
  * limitations under the License.
  */
 
-package com.android.settings.mallow;
-
-import com.android.internal.logging.MetricsLogger;
+package com.android.settings.nexus;
 
 import android.content.Context;
 import android.database.ContentObserver;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.SwitchPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.android.internal.view.RotationPolicy;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.internal.logging.MetricsLogger;
 import com.android.settings.Utils;
 
 public class DisplayRotation extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
@@ -57,7 +55,7 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
     private ContentObserver mAccelerometerRotationObserver = new ContentObserver(new Handler()) {
         @Override
         public void onChange(boolean selfChange) {
-            updateAccelerometerRotationCheckbox();
+            updateAccelerometerRotationSwitch();
         }
     };
 
@@ -71,7 +69,6 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
 
         mAccelerometer = (SwitchPreference) findPreference(KEY_ACCELEROMETER);
         mAccelerometer.setPersistent(false);
-        mAccelerometer.setOnPreferenceChangeListener(this);
 
         mRotation0Pref = (SwitchPreference) prefSet.findPreference(ROTATION_0_PREF);
         mRotation90Pref = (SwitchPreference) prefSet.findPreference(ROTATION_90_PREF);
@@ -86,16 +83,6 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
         mRotation90Pref.setChecked((mode & ROTATION_90_MODE) != 0);
         mRotation180Pref.setChecked((mode & ROTATION_180_MODE) != 0);
         mRotation270Pref.setChecked((mode & ROTATION_270_MODE) != 0);
-
-        mRotation0Pref.setOnPreferenceChangeListener(this);
-        mRotation90Pref.setOnPreferenceChangeListener(this);
-        mRotation180Pref.setOnPreferenceChangeListener(this);
-        mRotation270Pref.setOnPreferenceChangeListener(this);
-    }
-
-    @Override
-    protected int getMetricsCategory() {
-        return MetricsLogger.APPLICATION;
     }
 
     @Override
@@ -115,40 +102,40 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
         getContentResolver().unregisterContentObserver(mAccelerometerRotationObserver);
     }
 
-    private void updateState() {
-        updateAccelerometerRotationCheckbox();
+    @Override
+    protected int getMetricsCategory() {
+        return MetricsLogger.DISPLAY;
     }
 
-    private void updateAccelerometerRotationCheckbox() {
+    private void updateState() {
+        updateAccelerometerRotationSwitch();
+    }
+
+    private void updateAccelerometerRotationSwitch() {
         mAccelerometer.setChecked(!RotationPolicy.isRotationLocked(getActivity()));
     }
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        return false;
+    }
+
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mAccelerometer) {
             RotationPolicy.setRotationLockForAccessibility(getActivity(),
-                !((Boolean) objValue));
+                !mAccelerometer.isChecked());
         } else if (preference == mRotation0Pref ||
                 preference == mRotation90Pref ||
                 preference == mRotation180Pref ||
                 preference == mRotation270Pref) {
             int mode = 0;
-            if (preference == mRotation0Pref && ((Boolean) objValue)
-                    || preference != mRotation0Pref && mRotation0Pref.isChecked()) {
+            if (mRotation0Pref.isChecked())
                 mode |= ROTATION_0_MODE;
-            }
-            if (preference == mRotation90Pref && ((Boolean) objValue)
-                    || preference != mRotation90Pref && mRotation90Pref.isChecked()) {
+            if (mRotation90Pref.isChecked())
                 mode |= ROTATION_90_MODE;
-            }
-            if (preference == mRotation180Pref && ((Boolean) objValue)
-                    || preference != mRotation180Pref && mRotation180Pref.isChecked()) {
+            if (mRotation180Pref.isChecked())
                 mode |= ROTATION_180_MODE;
-            }
-            if (preference == mRotation270Pref && ((Boolean) objValue)
-                    || preference != mRotation270Pref && mRotation270Pref.isChecked()) {
+            if (mRotation270Pref.isChecked())
                 mode |= ROTATION_270_MODE;
-            }
             if (mode == 0) {
                 mode |= ROTATION_0_MODE;
                 mRotation0Pref.setChecked(true);
@@ -157,6 +144,6 @@ public class DisplayRotation extends SettingsPreferenceFragment implements OnPre
                     Settings.System.ACCELEROMETER_ROTATION_ANGLES, mode);
             return true;
         }
-        return false;
+        return super.onPreferenceTreeClick(preferenceScreen, preference);
     }
 }
