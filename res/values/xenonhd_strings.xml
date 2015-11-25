@@ -194,4 +194,7 @@
 
 	<!-- Lockscreen settings -->
     <string name="lockscreen_category">Lockscreen</string>
+
+	<!-- Lock screen shortcuts -->
+	<string name="lockscreen_targets_message">Shortcuts</string>
 </resources>
