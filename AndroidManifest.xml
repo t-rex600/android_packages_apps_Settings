@@ -2438,6 +2438,9 @@
                 android:value="true" />
         </activity>
 
+        <!-- Download Center -->
+        <activity android:name=".liquid.LiquidSettings" />
+        
         <!-- Show regulatory info (from settings item or dialing "*#07#") -->
         <activity android:name="RegulatoryInfoDisplayActivity"
                   android:label="@string/regulatory_information"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/liquid_settings_title" >
+
+    <PreferenceScreen
+        android:key="about_liquid"
+        android:fragment="com.android.settings.liquid.LiquidAbout"
+        android:title="@string/liquid_menu_about" />
+
+    <PreferenceCategory
+        android:key="category_liquid_personalization"
+        android:title="@string/liquid_menu_personalizaton" >
+</PreferenceCategory>
+</PreferenceScreen>
