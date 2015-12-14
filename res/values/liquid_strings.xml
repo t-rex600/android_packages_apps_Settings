@@ -25,12 +25,12 @@
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers">Layers</string>
 
-    <!-- Download Center -->
+    <!-- Liquid Center -->
     <string name="header_category_liquid">Personalization</string>
-    <string name="liquid_settings_title">Download Center</string>
+    <string name="liquid_settings_title">Liquid</string>
     <!-- Center Menu -->
     <string name="liquid_menu_personalizaton">Liquid options</string>
-    <string name="liquid_menu_about">About Liquid</string>
+    <string name="liquid_menu_about">Download Center</string>
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
