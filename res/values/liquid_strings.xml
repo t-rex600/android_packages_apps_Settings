@@ -24,6 +24,9 @@
 
     <!-- BitSyko Layers  -->
     <string name="bitsyko_layers">Layers</string>
+    
+    <!-- Kernel Auditor  -->
+    <string name="performance_settings">Performance</string>
 
     <!-- Liquid Center -->
     <string name="header_category_liquid">Personalization</string>
