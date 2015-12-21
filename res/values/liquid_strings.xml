@@ -27,6 +27,9 @@
     
     <!-- Kernel Auditor  -->
     <string name="performance_settings">Performance</string>
+    
+    <!-- Viper4Android  -->
+    <string name="equalizer_settings_title">Equalizer</string>
 
     <!-- Liquid Center -->
     <string name="header_category_liquid">Personalization</string>
