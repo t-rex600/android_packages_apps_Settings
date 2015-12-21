@@ -32,5 +32,8 @@
 
     <!-- Kernel Auditor  -->
     <string name="performance_settings">Performance</string>
+    
+    <!-- Viper4Android  -->
+    <string name="equalizer_settings_title">Equalizer</string>
 
  </resources>
