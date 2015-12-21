@@ -32,6 +32,9 @@
 
     <!-- Kernel Auditor  -->
     <string name="performance_settings">Performance</string>
+    
+    <!-- Viper4Android  -->
+    <string name="equalizer_settings_title">Equalizer</string>
 
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
