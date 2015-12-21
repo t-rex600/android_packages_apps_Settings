@@ -26,6 +26,9 @@
 
     <!-- Kernel Auditor  -->
     <string name="performance_settings">Performance</string>
+    
+    <!-- Viper4Android  -->
+    <string name="equalizer_settings_title">Equalizer</string>
 
     <!-- Volume Steps -->
     <string name="volume_steps_title">Volume steps</string>
