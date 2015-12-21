@@ -38,8 +38,8 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
-    <!-- Miscellaneous settings -->
-    <string name="misc_settings_title">Miscellaneous</string>
+    <!-- Liquid settings -->
+    <string name="misc_settings_title">Liquid</string>
 
     <string name="header_category_personalization">Personalization</string>
 
