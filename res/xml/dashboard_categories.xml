@@ -77,12 +77,12 @@
             android:id="@+id/liquid_section"
             android:title="@string/header_category_liquid" >
 
-        <!-- Download Center -->
+        <!-- Liquid -->
         <dashboard-tile
                 android:id="@+id/liquid_settings"
                 android:title="@string/liquid_settings_title"
                 android:fragment="com.android.settings.liquid.LiquidSettings" 
-        		android:icon="@drawable/ic_download_liquid" />
+        		android:icon="@drawable/ic_liquid_theme_settings" />
 
         <!-- BitSyko Layers App -->
         <dashboard-tile
