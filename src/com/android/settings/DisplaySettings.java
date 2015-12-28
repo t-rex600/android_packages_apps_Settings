@@ -97,7 +97,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
 
     private static final String CATEGORY_ADVANCED = "advanced_display_prefs";
 
-    private static final String KEY_DISPLAY_ROTATION = "display_rotation";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
 
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
@@ -224,13 +223,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             mNightModePreference.setOnPreferenceChangeListener(this);
         }
 
-        mVolumeRockerWake = (SwitchPreference) findPreference(VOLUME_ROCKER_WAKE);
-        mVolumeRockerWake.setOnPreferenceChangeListener(this);
-        int volumeRockerWake = Settings.System.getInt(getContentResolver(),
-                VOLUME_ROCKER_WAKE, 0);
-        mVolumeRockerWake.setChecked(volumeRockerWake != 0);
-        }
-
         PreferenceScreen advancedPrefs = (PreferenceScreen) findPreference(CATEGORY_ADVANCED);
 
         boolean proximityCheckOnWait = getResources().getBoolean(
@@ -239,7 +231,12 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
             advancedPrefs.removePreference(findPreference(KEY_PROXIMITY_WAKE));
             Settings.System.putInt(getContentResolver(), Settings.System.PROXIMITY_ON_WAKE, 1);
         }
-
+        
+        mVolumeRockerWake = (SwitchPreference) findPreference(VOLUME_ROCKER_WAKE);
+        mVolumeRockerWake.setOnPreferenceChangeListener(this);
+        int volumeRockerWake = Settings.System.getInt(getContentResolver(),
+                VOLUME_ROCKER_WAKE, 0);
+        mVolumeRockerWake.setChecked(volumeRockerWake != 0);
         mWakeWhenPluggedOrUnplugged =
                 (SwitchPreference) findPreference(KEY_WAKE_WHEN_PLUGGED_OR_UNPLUGGED);
     }
