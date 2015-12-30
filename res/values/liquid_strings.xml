@@ -21,4 +21,7 @@
     <string name="build_date">Build date</string>
     <string name="build_date_default">Unknown</string>
 
+    <!-- Download Center -->
+    <string name="liquid_menu_about">Download Center</string>
+
 </resources>
