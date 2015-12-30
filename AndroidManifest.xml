@@ -2473,6 +2473,9 @@
         <activity android:name=".notificationlight.NotificationLightSettings" />
         <activity android:name=".notificationlight.BatteryLightSettings" />
 
+        <!-- Download Center -->
+        <activity android:name=".liquid.LiquidAbout" />
+
         <activity android:name=".cyanogenmod.PrivacySettings" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
