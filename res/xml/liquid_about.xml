@@ -28,16 +28,16 @@
         android:data="http://opengapps.org/" />
 </PreferenceScreen>
 
-<PreferenceScreen android:title="Google+">
+<PreferenceScreen android:title="LiquidDark Google+">
     <intent
         android:action="android.intent.action.VIEW"
         android:data="https://plus.google.com/communities/104702251160373892339" />
 </PreferenceScreen>
 
-<PreferenceScreen android:title="Nexus Central Roms Google+">
+<PreferenceScreen android:title="Nexus world's Google+">
     <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://plus.google.com/communities/116021659726877284716" />
+        android:data="https://plus.google.com/communities/104511129112264371242" />
 </PreferenceScreen>
 
 </PreferenceScreen>
