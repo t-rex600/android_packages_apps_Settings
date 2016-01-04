@@ -323,5 +323,11 @@
     <string name="pref_scrollingcache_default_enable">Default enable</string>
     <string name="pref_scrollingcache_default_disable">Default disable</string>
     <string name="pref_scrollingcache_force_disable">Force disable</string>
+    
+        <!-- Animation categories-->
+    <string name="animations_cat">System Animations</string>
+    <string name="toast_cat">Toast Settings</string>
+    <string name="list_cat">Listview</string>
+    <string name="perf_cat">Animation And Performance</string>
 
 </resources>
