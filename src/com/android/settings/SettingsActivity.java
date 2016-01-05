@@ -1193,10 +1193,7 @@ public class SettingsActivity extends Activity
                                 curBundle = null;
                             }
 
-                            // Show the SIM Cards setting if there are more than 2 SIMs installed.
-                            if(tile.id != R.id.sim_settings || Utils.showSimCardTile(context)){
-                                category.addTile(tile);
-                            }
+                            category.addTile(tile);
 
                         } else if (innerNodeName.equals("external-tiles")) {
                             category.externalIndex = category.getTilesCount();
@@ -1256,9 +1253,13 @@ public class SettingsActivity extends Activity
                     if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
                         removeTile = true;
                     }
-				} else if (id == R.id.mobile_networks) {
-					// Remove Mobile Network Settings if Mobile service is not available.
-                    if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
+                 } else if (id == R.id.mobile_networks) {
+                    if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)
+                            || Utils.showSimCardTile(this)) {
+                        removeTile = true;
+                    }
+                }  else if (id == R.id.sim_settings) {
+                    if (!Utils.showSimCardTile(this)) {
                         removeTile = true;
                     }
                 } else if (id == R.id.data_usage_settings) {
