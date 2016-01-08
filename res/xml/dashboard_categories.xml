@@ -94,7 +94,6 @@
                 android:title="@string/misc_settings_title"
                 android:fragment="com.android.settings.xenonhd.MiscSettings"
                 android:icon="@drawable/ic_settings_misc" />
-        </dashboard-tile>
 
         <!-- BitSyko Layers App -->
         <dashboard-tile
