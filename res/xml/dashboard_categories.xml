@@ -80,7 +80,6 @@
                 android:fragment="com.android.settings.WirelessSettings"
                 android:icon="@drawable/ic_settings_more"
                 />
-        </dashboard-tile>
 
     </dashboard-category>
 
@@ -94,8 +93,7 @@
                 android:id="@+id/misc_settings"
                 android:title="@string/misc_settings_title"
                 android:fragment="com.android.settings.xenonhd.MiscSettings"
-                android:icon="@drawable/ic_settings_misc"
-                />
+                android:icon="@drawable/ic_settings_misc" />
         </dashboard-tile>
 
         <!-- BitSyko Layers App -->
