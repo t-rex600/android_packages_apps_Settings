@@ -39,6 +39,7 @@ import android.view.IWindowManager;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.WindowManagerGlobal;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.R;
@@ -47,6 +48,7 @@ import com.android.settings.Utils;
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
     private static final String TAG = "SystemSettings";
 
     private static final String KEY_HOME_LONG_PRESS = "hardware_keys_home_long_press";
@@ -63,6 +65,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_VOLUME = "volume_keys";
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
     private static final String CATEGORY_NAVBAR = "navigation_bar";
+    private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
 
     // Available custom actions to perform on a key press.
     // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
@@ -99,6 +102,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 
 	private ListPreference mVolumeKeyCursorControl;
 	private SwitchPreference mVolumeRockerWake;
+
+    private ColorPickerPreference mNavbarButtonTint;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -154,6 +159,15 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             hasAnyBindableKey = true;
         } else {
             prefScreen.removePreference(homeCategory);
+
+        // Navigation bar button color
+        mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
+        mNavbarButtonTint.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NAVIGATION_BAR_TINT, 0xffffffff);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbarButtonTint.setSummary(hexColor);
+        mNavbarButtonTint.setNewPreviewColor(intColor);
         }
 
         if (hasMenuKey) {
@@ -225,6 +239,14 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.VOLUME_ROCKER_WAKE,
                     ((Boolean) newValue) ? 1 : 0);
+            return true;
+        } else if (preference == mNavbarButtonTint) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_TINT, intHex);
             return true;
         }
         return false;

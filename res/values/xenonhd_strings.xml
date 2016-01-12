@@ -212,7 +212,10 @@
     <string name="show_carrier_statusbar">Status bar only</string>
     <string name="show_carrier_enabled">Both</string>
 
-	<!-- Headphones icon switch -->
+    <!-- Navigation bar button color -->
+    <string name="navbar_button_tint_title">Navigation button tint</string>
+
+    <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Headset icon</string>
     <string name="show_headset_icon_summary">Shows icon when headsets are connected.</string>
 
