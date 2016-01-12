@@ -54,7 +54,12 @@
             android:title="@string/kill_app_longpress_back"
             android:summary="@string/kill_app_longpress_back_summary"
             android:defaultValue="false" />
-	
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="navigation_bar_tint"
+            android:title="@string/navbar_button_tint_title"
+            android:defaultValue="#ffffff" />
+
     </PreferenceCategory>
 
 	<PreferenceCategory

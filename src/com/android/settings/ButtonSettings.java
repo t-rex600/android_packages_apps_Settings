@@ -46,6 +46,7 @@ import android.view.IWindowManager;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.WindowManagerGlobal;
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -53,15 +54,26 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
 	private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
 	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
 	private static final String KEY_VOLUME_CONTROL_RING_STREAM = "volume_keys_control_ring_stream";
+        private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
 
 	private ListPreference mVolumeKeyCursorControl;
 	private SwitchPreference mVolumeRockerWake;
 	private SwitchPreference mVolumeControlRingStream;
+        private ColorPickerPreference mNavbarButtonTint;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.button_settings);
+
+        // Navigation bar button color
+        mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
+        mNavbarButtonTint.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NAVIGATION_BAR_TINT, 0xffffffff);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbarButtonTint.setSummary(hexColor);
+        mNavbarButtonTint.setNewPreviewColor(intColor);
 
 		// volume key cursor control
         mVolumeKeyCursorControl = (ListPreference) findPreference(VOLUME_KEY_CURSOR_CONTROL);
@@ -105,6 +117,13 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(getActivity().getContentResolver(),
                 Settings.System.VOLUME_ROCKER_WAKE,
                     ((Boolean) newValue) ? 1 : 0);
+        } else if (preference == mNavbarButtonTint) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_TINT, intHex);
             return true;
         }
         return false;
