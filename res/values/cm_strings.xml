@@ -194,4 +194,8 @@
     multiple font sizes in a limited amount of space. -->
     <string name="font_size_sample">Sample</string>
 
+    <!-- Reset Profiles -->
+    <string name="profile_reset_title">Reset</string>
+    <string name="profile_reset_message">Delete all user created profiles and app groups and restore them to default?</string>
+
 </resources>
