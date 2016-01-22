@@ -184,4 +184,8 @@
     <string name="navigation_bar_size_42_dp">42 dp</string>
     <string name="navigation_bar_size_0_dp">0 dp (off)</string>
 
+    <!-- Double Tap Navbar to Sleep -->
+    <string name="double_tap_sleep_nav_bar_title">Tap to sleep</string>
+    <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
+
 </resources>
