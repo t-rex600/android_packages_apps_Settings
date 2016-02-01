@@ -190,6 +190,7 @@
 
     <!-- Navigation bar button color -->
     <string name="navbar_button_tint_title">Navigation button tint</string>
+    <string name="navbar_button_tint_switch_title">Navigation button tinting</string>
 
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Headset icon</string>
