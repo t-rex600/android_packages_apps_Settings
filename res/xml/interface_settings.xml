@@ -28,7 +28,7 @@
             android:title="@string/night_mode_title"
             settings:keywords="@string/keywords_display_night_mode"
             android:summary="@string/night_mode_summary"
-            android:persistent="true"
+            android:persistent="false"
             android:entries="@array/night_mode_entries"
             android:entryValues="@array/night_mode_values" />
 
