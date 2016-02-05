@@ -1347,39 +1347,6 @@ public final class Utils {
         }
     }
 
-    /**
-     * Locks the activity orientation to the current device orientation
-     * @param activity
-     */
-    public static void lockCurrentOrientation(Activity activity) {
-        int currentRotation = activity.getWindowManager().getDefaultDisplay().getRotation();
-        int orientation = activity.getResources().getConfiguration().orientation;
-        int frozenRotation = 0;
-        switch (currentRotation) {
-            case Surface.ROTATION_0:
-                frozenRotation = orientation == Configuration.ORIENTATION_LANDSCAPE
-                        ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-                        : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT;
-                break;
-            case Surface.ROTATION_90:
-                frozenRotation = orientation == Configuration.ORIENTATION_PORTRAIT
-                        ? ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT
-                        : ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
-                break;
-            case Surface.ROTATION_180:
-                frozenRotation = orientation == Configuration.ORIENTATION_LANDSCAPE
-                        ? ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE
-                        : ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT;
-                break;
-            case Surface.ROTATION_270:
-                frozenRotation = orientation == Configuration.ORIENTATION_PORTRAIT
-                        ? ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-                        : ActivityInfo.SCREEN_ORIENTATION_REVERSE_LANDSCAPE;
-                break;
-        }
-        activity.setRequestedOrientation(frozenRotation);
-    }
-
     public static Context createPackageContext(Context context, String packageName) {
         try {
             return context.createPackageContext(packageName, 0);

@@ -27,6 +27,12 @@
     <string name="enabled">Enabled</string>
     <string name="default_string">Default</string>
     <string name="choose_app">Choose application</string>
+    <string name="ok_string">OK</string>
+    <string name="enabled_string">Enabled</string>
+    <string name="disabled_string">Disabled</string>
+    <string name="general_string">General</string>
+    <string name="reset_string">Reset</string>
+    <string name="empty_string">Empty</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
