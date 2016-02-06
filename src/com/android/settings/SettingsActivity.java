@@ -1321,11 +1321,29 @@ public class SettingsActivity extends Activity
                     try {
                         supported = (getPackageManager().getPackageInfo("com.lovejoy777.rroandlayersmanager", 0).versionCode > 0);
                     } catch (PackageManager.NameNotFoundException e) {
-
                     }
                     if (!supported) {
                         removeTile = true;
                     }
+                } else if (id == R.id.kernel_auditor) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.grarak.kerneladiutor", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.equalizer_settings) {
+                   // Embedding into Settings only if app exists (user could manually remove it)
+                   boolean supported = false;
+                   try {
+                       supported = (getPackageManager().getPackageInfo("com.vipercn.viper4android_v2", 0).versionCode >= 18);
+                   } catch (PackageManager.NameNotFoundException e) {
+                   }
+                   if (!supported) {
+                       removeTile = true;
+                   }
                 }
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0
                         && !ArrayUtils.contains(SETTINGS_FOR_RESTRICTED, id)) {
