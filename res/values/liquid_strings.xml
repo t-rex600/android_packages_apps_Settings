@@ -24,6 +24,9 @@
     <!-- Download Center -->
     <string name="liquid_menu_about">Download Center</string>
 
+    <!-- SuperSU -->
+    <string name="supersu_title">SuperSU</string>
+
     <!-- Kernel Auditor  -->
     <string name="performance_settings">Performance</string>
     
