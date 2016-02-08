@@ -35,8 +35,8 @@
 
 	<string name="header_category_personalization">Personalization</string>
 
-	<!-- XenonHD settings -->
-    <string name="misc_settings_title">ROM Settings</string>
+	<!-- Liquid settings -->
+    <string name="misc_settings_title">Liquid</string>
 
 	<!-- Status bar | Network Traffic -->
 	<string name="network_traffic_title">Network traffic</string>
@@ -210,7 +210,7 @@
     <string name="show_carrier_enabled">Both</string>
 
     <!-- Navigation bar button color -->
-    <string name="navbar_button_tint_title">Navigation button tint</string>
+    <string name="navbar_button_tint_title">Navigation button color</string>
 
     <!-- Headphones icon switch -->
     <string name="show_headset_icon_title">Headset icon</string>
