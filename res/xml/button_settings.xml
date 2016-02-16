@@ -26,12 +26,6 @@
             android:fragment="com.android.settings.xenonhd.NavBarDimen"
             android:title="@string/navbar_dimen_title" />
 
-        <com.android.settings.slim.SystemSettingSwitchPreference
-            android:key="navigation_bar_left"
-            android:title="@string/navigation_bar_left_title"
-            android:summary="@string/navigation_bar_left_summary"
-            android:defaultValue="false" />
-
         <PreferenceScreen
             android:key="navigation_bar"
             android:fragment="com.android.settings.cyanogenmod.NavBar"
