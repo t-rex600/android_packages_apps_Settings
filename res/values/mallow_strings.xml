@@ -25,12 +25,6 @@
     <string name="empty_string">Empty</string>
     <string name="attention">Attention</string>
 
-    <!-- About phone screen, build date of ROM, Mallow version -->
-    <string name="build_date">Mallow build date</string>
-    <string name="build_date_default">2015-01-01-0000</string>
-    <string name="mallow_version_title">Mallow version</string>
-    <string name="mallow_version_default">Unknown</string>
-
     <!-- Slim strings -->
     <string name="add">Add</string>
     <string name="enabled">Enabled</string>
