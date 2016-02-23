@@ -66,6 +66,8 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private static final String CATEGORY_BACKLIGHT = "key_backlight";
     private static final String CATEGORY_NAVBAR = "navigation_bar";
     private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
+    private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
+    private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
 
     // Available custom actions to perform on a key press.
     // Must match values for KEY_HOME_LONG_PRESS_ACTION in:
@@ -93,15 +95,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private ListPreference mHomeDoubleTapAction;
     private ListPreference mMenuPressAction;
     private ListPreference mMenuLongPressAction;
+    private ListPreference mVolumeKeyCursorControl;
+    private SwitchPreference mVolumeRockerWake;
 
     private PreferenceCategory mNavigationPreferencesCat;
 
     private Handler mHandler;
-	private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
-	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
-
-	private ListPreference mVolumeKeyCursorControl;
-	private SwitchPreference mVolumeRockerWake;
 
     private ColorPickerPreference mNavbarButtonTint;
 
