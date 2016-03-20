@@ -17,20 +17,21 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         android:title="@string/about_settings">
 
-        <!-- System update settings - launches activity -->
-        <PreferenceScreen android:key="system_update_settings"
-                android:title="@string/system_update_settings_list_item_title"
-                android:summary="@string/system_update_settings_list_item_summary">
-            <intent android:action="android.settings.SYSTEM_UPDATE_SETTINGS" />
-        </PreferenceScreen>
 
+        <PreferenceScreen android:key="liquid_logo"
+                          android:enabled="false"
+                          android:layout="@layout/liquid_logo_row" />		
 
-        <PreferenceScreen android:key="additional_system_update_settings"
-                          android:title="@string/additional_system_update_settings_list_item_title">
-            <intent android:action="android.intent.action.MAIN"
-                    android:targetPackage="@string/additional_system_update"
-                    android:targetClass="@string/additional_system_update_menu" />
-        </PreferenceScreen>
+        <!-- Changelog -->
+        <PreferenceScreen android:key="changelog"
+                android:title="@string/changelog_crdroid_title"
+                android:fragment="com.android.settings.crdroid.Changelog" />
+
+        <!-- Download Center -->
+        <PreferenceScreen
+                android:key="about_liquid"
+                android:fragment="com.android.settings.liquid.LiquidAbout"
+                android:title="@string/liquid_menu_about" />
 
         <!-- Device status - launches activity -->
         <PreferenceScreen android:key="status_info"
@@ -106,6 +107,18 @@
                 style="?android:preferenceInformationStyle"
                 android:title="@string/build_number"
                 android:summary="@string/device_info_default"/>
+
+        <!-- Build date -->
+        <Preference android:key="build_date"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/build_date"
+                android:summary="@string/build_date_default" />
+
+        <!-- Liquid firmware version -->
+        <Preference android:key="liquid_version"
+                style="?android:preferenceInformationStyle"
+                android:title="@string/liquid_version_title"
+                android:summary="@string/liquid_version_default"/>
 
         <!-- SELinux status information -->
         <Preference android:key="selinux_status"

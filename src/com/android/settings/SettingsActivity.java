@@ -79,6 +79,7 @@ import com.android.settings.applications.ProcessStatsUi;
 import com.android.settings.applications.UsageAccessDetails;
 import com.android.settings.applications.WriteSettingsDetails;
 import com.android.settings.bluetooth.BluetoothSettings;
+import com.android.settings.mallow.DisplayRotation;
 import com.android.settings.dashboard.DashboardCategory;
 import com.android.settings.dashboard.DashboardSummary;
 import com.android.settings.dashboard.DashboardTile;
@@ -354,6 +355,7 @@ public class SettingsActivity extends Activity
             ProcessStatsSummary.class.getName(),
             DrawOverlayDetails.class.getName(),
             WriteSettingsDetails.class.getName(),
+            DisplayRotation.class.getName(),
     };
 
 
@@ -615,7 +617,7 @@ public class SettingsActivity extends Activity
                     1 /* one home activity by default */);
         } else {
             if (!mIsShowingDashboard) {
-                mDisplaySearch = false;
+                mDisplaySearch = true;
                 // UP will be shown only if it is a sub settings
                 if (mIsShortcut) {
                     mDisplayHomeAsUpEnabled = isSubSettings;
@@ -1221,7 +1223,9 @@ public class SettingsActivity extends Activity
     private void updateTilesList(List<DashboardCategory> target) {
         final boolean showDev = mDevelopmentPreferences.getBoolean(
                 DevelopmentSettings.PREF_SHOW,
-                android.os.Build.TYPE.equals("eng"));
+                android.os.Build.TYPE.equals("eng") ||
+                android.os.Build.TYPE.equals("userdebug") ||
+                android.os.Build.TYPE.equals("user"));
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
 
@@ -1250,6 +1254,11 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.bluetooth_settings) {
                     // Remove Bluetooth Settings if Bluetooth service is not available.
                     if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
+                        removeTile = true;
+                    }
+				} else if (id == R.id.mobile_networks) {
+					// Remove Mobile Network Settings if Mobile service is not available.
+                    if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
                         removeTile = true;
                     }
                 } else if (id == R.id.data_usage_settings) {
@@ -1299,6 +1308,36 @@ public class SettingsActivity extends Activity
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
                         removeTile = true;
                     }
+                } else if (id == R.id.supersu_settings) {
+                    // Embedding into Settings is supported from SuperSU v1.85 and up
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0).versionCode >= 185);
+                    } catch (PackageManager.NameNotFoundException e) {
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.kernel_auditor) {
+                    boolean supported = false;
+                    try {
+                        supported = (getPackageManager().getPackageInfo("com.grarak.kerneladiutor", 0).versionCode > 0);
+                    } catch (PackageManager.NameNotFoundException e) {
+
+                    }
+                    if (!supported) {
+                        removeTile = true;
+                    }
+                } else if (id == R.id.equalizer_settings) {
+                   // Embedding into Settings only if app exists (user could manually remove it)
+                   boolean supported = false;
+                   try {
+                       supported = (getPackageManager().getPackageInfo("com.vipercn.viper4android_v2", 0).versionCode >= 18);
+                   } catch (PackageManager.NameNotFoundException e) {
+                   }
+                   if (!supported) {
+                       removeTile = true;
+                   }
                 }
 
                 if (UserHandle.MU_ENABLED && UserHandle.myUserId() != 0

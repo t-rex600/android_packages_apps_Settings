@@ -423,7 +423,7 @@
     <string name="unlock_setup_wizard_fingerprint_details" msgid="7893457665921363009">"Dopo aver impostato il blocco schermo, puoi anche impostare la tua impronta digitale in Impostazioni e sicurezza."</string>
     <string name="unlock_disable_lock_title" msgid="1427036227416979120">"Disattiva blocco schermo"</string>
     <string name="unlock_disable_frp_warning_title" msgid="264008934468492550">"Rimuovere la protezione del dispositivo?"</string>
-    <string name="unlock_disable_frp_warning_content_pattern" msgid="8869767290771023461">"Le funzionalità di protezione del dispositivo non funzioneranno senza sequenza."</string>
+    <string name="unlock_disable_frp_warning_content_pattern" msgid="8869767290771023461">"Le funzionalità di protezione del dispositivo non funzioneranno senza sequenza."</string>
     <string name="unlock_disable_frp_warning_content_pattern_fingerprint" msgid="8212242533942400457">"Le funzionalità di protezione del dispositivo non funzioneranno senza sequenza.<xliff:g id="EMPTY_LINE">
 
 </xliff:g>Anche le impronte digitali salvate verranno eliminate da questo dispositivo e non potrai più utilizzarle per sbloccare il telefono, autorizzare gli acquisti o accedere alle app.\""</string>
@@ -2305,10 +2305,10 @@
     <string name="user_need_lock_message" msgid="5879715064416886811">"Prima di poter creare un profilo con limitazioni, devi impostare un blocco schermo per proteggere le tue app e i tuoi dati personali."</string>
     <string name="user_set_lock_button" msgid="8311219392856626841">"Imposta blocco"</string>
     <string name="user_summary_not_set_up" msgid="8778205026866794909">"Non configurato"</string>
-    <string name="user_summary_restricted_not_set_up" msgid="1628116001964325544">"Non impostato - Profilo con limitazioni"</string>
+    <string name="user_summary_restricted_not_set_up" msgid="1628116001964325544">"Non impostato - Profilo con limitazioni"</string>
     <string name="user_summary_managed_profile_not_set_up" msgid="1659125858619760573">"Non configurato - Profilo di lavoro"</string>
     <string name="user_owner" msgid="3879126011135546571">"Proprietario"</string>
-    <string name="user_you" msgid="1639158809315025986">"Tu (<xliff:g id="NAME">%s</xliff:g>)"</string>
+    <string name="user_you" msgid="1639158809315025986">"Tu (<xliff:g id="NAME">%s</xliff:g>)"</string>
     <string name="user_nickname" msgid="5148818000228994488">"Nickname"</string>
     <string name="user_add_user_type_title" msgid="2146438670792322349">"Aggiungi"</string>
     <string name="user_add_max_count" msgid="5405885348463433157">"Puoi aggiungere fino a <xliff:g id="USER_COUNT">%1$d</xliff:g> utenti"</string>
@@ -2321,7 +2321,7 @@
     <string name="user_add_user_message_short" msgid="1511354412249044381">"Il nuovo utente, una volta aggiunto, deve impostare il proprio spazio.\n\nQualsiasi utente può aggiornare le app per tutti gli altri."</string>
     <string name="user_setup_dialog_title" msgid="1765794166801864563">"Configurare l\'utente ora?"</string>
     <string name="user_setup_dialog_message" msgid="1004068621380867148">"Assicurati che la persona sia disponibile a prendere il dispositivo e configurare il suo spazio"</string>
-    <string name="user_setup_profile_dialog_message" msgid="3896568553327558731">"Configurare il profilo ora?"</string>
+    <string name="user_setup_profile_dialog_message" msgid="3896568553327558731">"Configurare il profilo ora?"</string>
     <string name="user_setup_button_setup_now" msgid="3391388430158437629">"Configura ora"</string>
     <string name="user_setup_button_setup_later" msgid="3068729597269172401">"Non ora"</string>
     <string name="user_cannot_manage_message" product="tablet" msgid="7153048188252553320">"Solo il proprietario del tablet può gestire gli utenti."</string>

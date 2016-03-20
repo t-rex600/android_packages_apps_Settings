@@ -242,19 +242,6 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
         }
     }
 
-    private void updateButtonWfcMode(Context context, boolean wfcEnabled, int wfcMode) {
-        mButtonWfcMode.setSummary(getWfcModeSummary(context, wfcMode));
-        mButtonWfcMode.setEnabled(wfcEnabled);
-
-        final PreferenceScreen preferenceScreen = getPreferenceScreen();
-        if (wfcEnabled) {
-            preferenceScreen.addPreference(mButtonWfcMode);
-        } else {
-            preferenceScreen.removePreference(mButtonWfcMode);
-        }
-        preferenceScreen.setEnabled(mEditableWfcMode);
-    }
-
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final Context context = getActivity();

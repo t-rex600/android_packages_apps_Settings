@@ -191,7 +191,9 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
         }
 
         // Make the device only visible to connected devices.
-        mLocalAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
+        if (mLocalAdapter != null) {
+            mLocalAdapter.setScanMode(BluetoothAdapter.SCAN_MODE_CONNECTABLE);
+        }
 
         if (isUiRestricted()) {
             return;
@@ -262,7 +264,11 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
         }
 
         mLocalManager.getCachedDeviceManager().clearNonBondedDevices();
-        mAvailableDevicesCategory.removeAll();
+        if (mAvailableDevicesCategory != null) {
+            mAvailableDevicesCategory.removeAll();
+        } else {
+              Log.e(TAG, "mAvailableDevicesCategory is null.");
+        }
         mInitialScanStarted = true;
         mLocalAdapter.startScanning(true);
     }
@@ -357,6 +363,10 @@ public final class BluetoothSettings extends DeviceListPreferenceFragment implem
 
             case BluetoothAdapter.STATE_OFF:
                 setOffMessage();
+                /* reset the progress icon only when available device category present */
+                if(mAvailableDevicesCategoryIsPresent) {
+                    ((BluetoothProgressCategory)mAvailableDevicesCategory).setProgress(false);
+                }
                 if (isUiRestricted()) {
                     messageId = R.string.bluetooth_empty_list_user_restricted;
                 }
