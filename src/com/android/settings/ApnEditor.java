@@ -350,8 +350,6 @@ public class ApnEditor extends InstrumentedPreferenceActivity
             if (pppNumber == null) {
                 if (!mNewApn) {
                     getPreferenceScreen().removePreference(mPppNumber);
-                } else if (getResources().getBoolean(R.bool.config_ppp_enabled)) {
-                    getPreferenceScreen().removePreference(mPppNumber);
                 }
             }
         }

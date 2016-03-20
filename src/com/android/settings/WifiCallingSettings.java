@@ -190,12 +190,6 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
             mValidListener = true;
         }
 
-        if (!isWfcModeSupported()) {
-            android.provider.Settings.Global.putInt(context.getContentResolver(),
-                    android.provider.Settings.Global.WFC_IMS_MODE,
-                    ImsConfig.WfcModeFeatureValueConstants.WIFI_ONLY);
-        }
-
         // NOTE: Buttons will be enabled/disabled in mPhoneStateListener
         boolean wfcEnabled = ImsManager.isWfcEnabledByUser(context)
                 && ImsManager.isNonTtyOrTtyOnVolteEnabled(context);
@@ -246,19 +240,6 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
         } else {
             MetricsLogger.action(getActivity(), getMetricsCategory(), -1);
         }
-    }
-
-    private void updateButtonWfcMode(Context context, boolean wfcEnabled, int wfcMode) {
-        mButtonWfcMode.setSummary(getWfcModeSummary(context, wfcMode));
-        mButtonWfcMode.setEnabled(wfcEnabled);
-
-        final PreferenceScreen preferenceScreen = getPreferenceScreen();
-        if (wfcEnabled && isWfcModeSupported()) {
-            preferenceScreen.addPreference(mButtonWfcMode);
-        } else {
-            preferenceScreen.removePreference(mButtonWfcMode);
-        }
-        preferenceScreen.setEnabled(mEditableWfcMode);
     }
 
     @Override
