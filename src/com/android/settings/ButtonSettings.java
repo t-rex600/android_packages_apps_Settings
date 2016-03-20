@@ -101,12 +101,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
     private PreferenceCategory mNavigationPreferencesCat;
 
     private Handler mHandler;
-	private static final String VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
-	private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
-
-	private ListPreference mVolumeKeyCursorControl;
-	private SwitchPreference mVolumeRockerWake;
-
+    
     private ColorPickerPreference mNavbarButtonTint;
 
     @Override

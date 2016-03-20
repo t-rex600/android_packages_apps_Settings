@@ -296,9 +296,4 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
         }
         return resId;
     }
-
-    private boolean isWfcModeSupported() {
-        return getActivity().getResources().getBoolean(
-                R.bool.config_wfc_mode_supported);
-    }
 }
