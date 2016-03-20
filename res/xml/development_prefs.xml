@@ -53,13 +53,6 @@
         android:key="oem_unlock_enable"
         android:title="@string/oem_unlock_enable"
         android:summary="@string/oem_unlock_enable_summary"/>
-    
-     <com.android.settings.DropDownPreference
-        android:key="night_mode"
-        android:title="@string/night_mode_title"
-        android:summary="@string/night_mode_summary"
-        android:entries="@array/night_mode_entries"
-        android:entryValues="@array/night_mode_values" />
 
     <PreferenceScreen
         android:key="running_apps"
@@ -84,34 +77,11 @@
 
         <SwitchPreference
             android:key="enable_adb"
-            android:title="@string/enable_adb_cm"
-            android:summary="@string/enable_adb_summary_cm"/>
-
-        <SwitchPreference
-            android:key="adb_notify"
-            android:title="@string/adb_notify"
-            android:summary="@string/adb_notify_summary"
-            android:dependency="enable_adb"/>
-
-        <SwitchPreference
-            android:key="adb_over_network"
-            android:title="@string/adb_over_network"
-            android:summary="@string/adb_over_network_summary"
-            android:dependency="enable_adb"/>
+            android:title="@string/enable_adb"
+            android:summary="@string/enable_adb_summary"/>
 
         <Preference android:key="clear_adb_keys"
                 android:title="@string/clear_adb_keys" />
-
-        <com.android.settings.HostnamePreference
-            android:key="device_hostname"
-            android:title="@string/device_hostname"
-            android:dialogTitle="@string/device_hostname"
-            android:positiveButtonText="@string/wifi_save"
-            android:negativeButtonText="@string/wifi_cancel"
-            android:selectAllOnFocus="true"
-            android:imeOptions="actionDone"
-            android:inputType="textNoSuggestions"
-            android:persistent="false" />
 
         <SwitchPreference
             android:key="enable_terminal"

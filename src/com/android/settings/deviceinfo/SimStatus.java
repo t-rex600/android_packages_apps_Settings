@@ -16,8 +16,6 @@
 
 package com.android.settings.deviceinfo;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -37,7 +35,6 @@ import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.view.MenuItem;
 import android.util.Log;
 
 import com.android.internal.logging.MetricsLogger;
@@ -136,13 +133,6 @@ public class SimStatus extends InstrumentedPreferenceActivity {
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
-            // android.R.id.home will be triggered in onOptionsItemSelected()
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
         mTelephonyManager = (TelephonyManager) getSystemService(TELEPHONY_SERVICE);
 
         mSelectableSubInfos = SubscriptionManager.from(this).getActiveSubscriptionInfoList();
@@ -299,7 +289,6 @@ public class SimStatus extends InstrumentedPreferenceActivity {
 
     private void updateServiceState(ServiceState serviceState) {
         final int state = serviceState.getState();
-        final int dataState = mPhone.getServiceState().getDataRegState();
         String display = mRes.getString(R.string.radioInfo_unknown);
 
         switch (state) {
@@ -308,9 +297,7 @@ public class SimStatus extends InstrumentedPreferenceActivity {
                 break;
             case ServiceState.STATE_OUT_OF_SERVICE:
                 // Set signal strength to 0 when service state is STATE_OUT_OF_SERVICE
-                if (ServiceState.STATE_OUT_OF_SERVICE == dataState) {
-                    mSignalStrength.setSummary("0");
-                }
+                mSignalStrength.setSummary("0");
             case ServiceState.STATE_EMERGENCY_ONLY:
                 // Set summary string of service state to radioInfo_service_out when
                 // service state is both STATE_OUT_OF_SERVICE & STATE_EMERGENCY_ONLY
@@ -342,11 +329,9 @@ public class SimStatus extends InstrumentedPreferenceActivity {
     void updateSignalStrength(SignalStrength signalStrength) {
         if (mSignalStrength != null) {
             final int state = mPhone.getServiceState().getState();
-            final int dataState = mPhone.getServiceState().getDataRegState();
             Resources r = getResources();
 
-            if (((ServiceState.STATE_OUT_OF_SERVICE == state) &&
-                    (ServiceState.STATE_OUT_OF_SERVICE == dataState)) ||
+            if ((ServiceState.STATE_OUT_OF_SERVICE == state) ||
                     (ServiceState.STATE_POWER_OFF == state)) {
                 mSignalStrength.setSummary("0");
                 return;
@@ -453,24 +438,4 @@ public class SimStatus extends InstrumentedPreferenceActivity {
         return mTabHost.newTabSpec(tag).setIndicator(title).setContent(
                 mEmptyTabContent);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        final int itemId = item.getItemId();
-        switch (itemId) {
-            case android.R.id.home:
-                goUpToTopLevelSetting(this);
-                return true;
-            default:
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Finish current Activity and go up to the top level Settings.
-     */
-    public static void goUpToTopLevelSetting(Activity activity) {
-        activity.finish();
-    }
-
 }

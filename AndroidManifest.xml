@@ -35,7 +35,6 @@
     <uses-permission android:name="android.permission.ACCESS_WIMAX_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIMAX_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="com.android.certinstaller.INSTALL_AS_USER" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -120,16 +119,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity-alias>
-
-        <activity
-            android:name="About"
-            android:taskAffinity="com.android.settings"
-	    android:parentActivityName="Settings"
-            android:label="@string/about_xenonhd">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
 
         <receiver android:name="ManagedProfileSetup">
             <intent-filter>
@@ -1510,8 +1499,6 @@
             android:taskAffinity="com.android.wizard"
             android:theme="@style/SetupWizardDisableAppStartingTheme" />
 
-        <activity android:name="ChooseLockPatternSize" android:exported="false"/>
-
         <activity android:name="ChooseLockPattern" android:exported="false"/>
 
         <activity android:name="SetupChooseLockPassword"
@@ -2435,9 +2422,6 @@
             <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
                 android:value="true" />
         </activity>
-
-        <activity android:name=".notificationlight.NotificationLightSettings" />
-        <activity android:name=".notificationlight.BatteryLightSettings" />
 
         <receiver android:name=".widget.SettingsAppWidgetProvider"
                 android:label="@string/gadget_title"

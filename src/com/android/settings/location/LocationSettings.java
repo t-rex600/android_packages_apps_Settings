@@ -120,7 +120,6 @@ public class LocationSettings extends LocationSettingsBase
         mSwitchBar = activity.getSwitchBar();
         mSwitch = mSwitchBar.getSwitch();
         mSwitchBar.show();
-        setHasOptionsMenu(true);
     }
 
     @Override
@@ -254,7 +253,7 @@ public class LocationSettings extends LocationSettingsBase
             boolean lockdownOnLocationAccess) {
         PreferenceCategory categoryLocationServices =
                 (PreferenceCategory) root.findPreference(KEY_LOCATION_SERVICES);
-        injector = IzatSettingsInjector.getSettingInjector(context);
+        injector = new SettingsInjector(context);
         // If location access is locked down by device policy then we only show injected settings
         // for the primary profile.
         List<Preference> locationServices = injector.getInjectedSettings(lockdownOnLocationAccess ?

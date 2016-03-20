@@ -41,8 +41,6 @@ public class WifiApEnabler {
 
     ConnectivityManager mCm;
     private String[] mWifiRegexs;
-    /* Indicates if we have to wait for WIFI_STATE_CHANGED intent */
-    private boolean mWaitForWifiStateChange = false;
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -57,11 +55,6 @@ public class WifiApEnabler {
                     handleWifiApStateChanged(state, reason);
                 } else {
                     handleWifiApStateChanged(state, WifiManager.SAP_START_FAILURE_GENERAL);
-                }
-             } else if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(action)) {
-                if (mWaitForWifiStateChange == true) {
-                    handleWifiStateChanged(intent.getIntExtra(
-                            WifiManager.EXTRA_WIFI_STATE, WifiManager.WIFI_STATE_UNKNOWN));
                 }
             } else if (ConnectivityManager.ACTION_TETHER_STATE_CHANGED.equals(action)) {
                 ArrayList<String> available = intent.getStringArrayListExtra(
@@ -91,7 +84,6 @@ public class WifiApEnabler {
         mIntentFilter = new IntentFilter(WifiManager.WIFI_AP_STATE_CHANGED_ACTION);
         mIntentFilter.addAction(ConnectivityManager.ACTION_TETHER_STATE_CHANGED);
         mIntentFilter.addAction(Intent.ACTION_AIRPLANE_MODE_CHANGED);
-        mIntentFilter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
     }
 
     public void resume() {
@@ -115,27 +107,6 @@ public class WifiApEnabler {
     }
 
     public void setSoftapEnabled(boolean enable) {
-        int wifiSavedState = 0;
-         /**
-         * Check if we have to wait for the WIFI_STATE_CHANGED intent
-         * before we re-enable the Checkbox.
-         */
-        if (!enable) {
-            try {
-                wifiSavedState = Settings.Global.getInt(mContext.getContentResolver(),
-                    Settings.Global.WIFI_SAVED_STATE);
-            } catch (Settings.SettingNotFoundException e) {
-                ;
-            }
-            /**
-             * If Wi-Fi is turned of as part of SoftAp turn on process,
-             * we need to restore, Wi-Fi state after SoftAp turn Off.
-             * WIFI_SAVED_STATE inficates the state.
-             */
-            if (wifiSavedState == 1) {
-                 mWaitForWifiStateChange = true;
-            }
-        }
         if (TetherUtil.setWifiTethering(enable, mContext)) {
             /* Disable here, enabled on receiving success broadcast */
             mSwitch.setEnabled(false);
@@ -201,9 +172,7 @@ public class WifiApEnabler {
             case WifiManager.WIFI_AP_STATE_DISABLED:
                 mSwitch.setChecked(false);
                 mSwitch.setSummary(mOriginalSummary);
-                if (mWaitForWifiStateChange == false) {
-                    enableWifiSwitch();
-                }
+                enableWifiSwitch();
                 break;
             default:
                 mSwitch.setChecked(false);
@@ -213,17 +182,6 @@ public class WifiApEnabler {
                     mSwitch.setSummary(R.string.wifi_error);
                 }
                 enableWifiSwitch();
-        }
-    }
-
-     private void handleWifiStateChanged(int state) {
-        switch (state) {
-            case WifiManager.WIFI_STATE_ENABLED:
-            case WifiManager.WIFI_STATE_UNKNOWN:
-                enableWifiSwitch();
-                mWaitForWifiStateChange = false;
-                break;
-            default:
         }
     }
 }

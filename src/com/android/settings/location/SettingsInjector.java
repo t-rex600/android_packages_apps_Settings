@@ -150,7 +150,7 @@ class SettingsInjector {
      *
      * Duplicates some code from {@link android.content.pm.RegisteredServicesCache}.
      */
-    protected InjectedSetting parseServiceInfo(ResolveInfo service, UserHandle userHandle,
+    private static InjectedSetting parseServiceInfo(ResolveInfo service, UserHandle userHandle,
             PackageManager pm) throws XmlPullParserException, IOException {
 
         ServiceInfo si = service.serviceInfo;

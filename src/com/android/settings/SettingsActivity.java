@@ -615,7 +615,7 @@ public class SettingsActivity extends Activity
                     1 /* one home activity by default */);
         } else {
             if (!mIsShowingDashboard) {
-                mDisplaySearch = true;
+                mDisplaySearch = false;
                 // UP will be shown only if it is a sub settings
                 if (mIsShortcut) {
                     mDisplayHomeAsUpEnabled = isSubSettings;
@@ -1221,9 +1221,7 @@ public class SettingsActivity extends Activity
     private void updateTilesList(List<DashboardCategory> target) {
         final boolean showDev = mDevelopmentPreferences.getBoolean(
                 DevelopmentSettings.PREF_SHOW,
-                android.os.Build.TYPE.equals("eng") ||
-                android.os.Build.TYPE.equals("userdebug") ||
-                android.os.Build.TYPE.equals("user"));
+                android.os.Build.TYPE.equals("eng"));
 
         final UserManager um = (UserManager) getSystemService(Context.USER_SERVICE);
 
@@ -1252,11 +1250,6 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.bluetooth_settings) {
                     // Remove Bluetooth Settings if Bluetooth service is not available.
                     if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_BLUETOOTH)) {
-                        removeTile = true;
-                    }
-				} else if (id == R.id.mobile_networks) {
-					// Remove Mobile Network Settings if Mobile service is not available.
-                    if (!getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
                         removeTile = true;
                     }
                 } else if (id == R.id.data_usage_settings) {
@@ -1304,16 +1297,6 @@ public class SettingsActivity extends Activity
                 } else if (id == R.id.development_settings) {
                     if (!showDev || um.hasUserRestriction(
                             UserManager.DISALLOW_DEBUGGING_FEATURES)) {
-                        removeTile = true;
-                    }
-                } else if (id == R.id.supersu_settings) {
-                    // Embedding into Settings is supported from SuperSU v1.85 and up
-                    boolean supported = false;
-                    try {
-                        supported = (getPackageManager().getPackageInfo("eu.chainfire.supersu", 0).versionCode >= 185);
-                    } catch (PackageManager.NameNotFoundException e) {
-                    }
-                    if (!supported) {
                         removeTile = true;
                     }
                 }

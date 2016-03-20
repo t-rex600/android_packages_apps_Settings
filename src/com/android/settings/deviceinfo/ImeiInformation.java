@@ -16,13 +16,10 @@
 package com.android.settings.deviceinfo;
 
 import com.android.internal.logging.MetricsLogger;
-import com.android.internal.telephony.ConfigResourceUtil;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneConstants;
 import com.android.internal.telephony.PhoneFactory;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -31,7 +28,6 @@ import android.preference.PreferenceScreen;
 import android.telephony.SubscriptionManager;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
-import android.view.MenuItem;
 import com.android.settings.InstrumentedPreferenceActivity;
 import com.android.settings.R;
 
@@ -46,18 +42,10 @@ public class ImeiInformation extends InstrumentedPreferenceActivity {
 
     private SubscriptionManager mSubscriptionManager;
     private boolean isMultiSIM = false;
-    private static final int IMEI_14_DIGIT = 14;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-		
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
-            // android.R.id.home will be triggered in onOptionsItemSelected()
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-
         mSubscriptionManager = SubscriptionManager.from(this);
         final TelephonyManager telephonyManager =
             (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
@@ -77,24 +65,8 @@ public class ImeiInformation extends InstrumentedPreferenceActivity {
 
     private void setPreferenceValue(int phoneId) {
         final Phone phone = PhoneFactory.getPhone(phoneId);
-        ConfigResourceUtil mConfigResUtil = new ConfigResourceUtil();
-        String imeiStr =  null;
-
-        boolean enable14DigitImei = false;
-        try {
-            enable14DigitImei = mConfigResUtil.getBooleanValue(phone.getContext(),
-                        "config_enable_display_14digit_imei");
-        } catch(RuntimeException ex) {
-            //do Nothing
-        }
 
         if (phone != null) {
-            imeiStr = phone.getImei();
-            if (enable14DigitImei &&
-                     imeiStr != null && imeiStr.length() > 14) {
-                imeiStr = imeiStr.substring(0, IMEI_14_DIGIT);
-            }
-
             if (phone.getPhoneType() == TelephonyManager.PHONE_TYPE_CDMA) {
                 setSummaryText(KEY_MEID_NUMBER, phone.getMeid());
                 setSummaryText(KEY_MIN_NUMBER, phone.getCdmaMin());
@@ -109,7 +81,7 @@ public class ImeiInformation extends InstrumentedPreferenceActivity {
                 if (phone.getLteOnCdmaMode() == PhoneConstants.LTE_ON_CDMA_TRUE) {
                     // Show ICC ID and IMEI for LTE device
                     setSummaryText(KEY_ICC_ID, phone.getIccSerialNumber());
-                    setSummaryText(KEY_IMEI, imeiStr);
+                    setSummaryText(KEY_IMEI, phone.getImei());
                 } else {
                     // device is not GSM/UMTS, do not display GSM/UMTS features
                     // check Null in case no specified preference in overlay xml
@@ -117,7 +89,7 @@ public class ImeiInformation extends InstrumentedPreferenceActivity {
                     removePreferenceFromScreen(KEY_ICC_ID);
                 }
             } else {
-                setSummaryText(KEY_IMEI, imeiStr);
+                setSummaryText(KEY_IMEI, phone.getImei());
                 setSummaryText(KEY_IMEI_SV, phone.getDeviceSvn());
                 // device is not CDMA, do not display CDMA features
                 // check Null in case no specified preference in overlay xml
@@ -183,24 +155,4 @@ public class ImeiInformation extends InstrumentedPreferenceActivity {
     protected int getMetricsCategory() {
         return MetricsLogger.DEVICEINFO_IMEI_INFORMATION;
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        final int itemId = item.getItemId();
-        switch (itemId) {
-            case android.R.id.home:
-                goUpToTopLevelSetting(this);
-                return true;
-            default:
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Finish current Activity and go up to the top level Settings.
-     */
-    public static void goUpToTopLevelSetting(Activity activity) {
-        activity.finish();
-    }
-
 }

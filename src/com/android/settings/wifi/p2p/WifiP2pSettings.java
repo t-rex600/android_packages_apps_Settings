@@ -42,7 +42,6 @@ import android.preference.Preference;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceGroup;
 import android.preference.PreferenceScreen;
-import android.provider.Settings;
 import android.text.InputFilter;
 import android.text.TextUtils;
 import android.util.Log;
@@ -101,8 +100,6 @@ public class WifiP2pSettings extends SettingsPreferenceFragment
     private WifiP2pDeviceList mPeers = new WifiP2pDeviceList();
 
     private String mSavedDeviceName;
-
-    private int mStaDisconnectedScanIntervalWhenP2pConnected = 180000;
 
     private final BroadcastReceiver mReceiver = new BroadcastReceiver() {
         @Override
@@ -316,9 +313,7 @@ public class WifiP2pSettings extends SettingsPreferenceFragment
         mPersistentGroup = new PreferenceCategory(getActivity());
         mPersistentGroup.setTitle(R.string.wifi_p2p_remembered_groups);
         preferenceScreen.addPreference(mPersistentGroup);
-        Settings.Global.putInt(getContentResolver(),
-            Settings.Global.WIFI_SCAN_INTERVAL_WHEN_P2P_CONNECTED_MS,
-            mStaDisconnectedScanIntervalWhenP2pConnected);
+
         super.onActivityCreated(savedInstanceState);
     }
 

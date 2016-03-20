@@ -16,8 +16,6 @@
 
 package com.android.settings.deviceinfo;
 
-import android.app.ActionBar;
-import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.BroadcastReceiver;
 import android.content.ClipboardManager;
@@ -38,7 +36,6 @@ import android.os.UserHandle;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.text.TextUtils;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
@@ -163,12 +160,6 @@ public class Status extends InstrumentedPreferenceActivity {
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
-        ActionBar actionBar = getActionBar();
-        if (actionBar != null) {
-            // android.R.id.home will be triggered in onOptionsItemSelected()
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
 
         mHandler = new MyHandler(this);
 
@@ -370,24 +361,4 @@ public class Status extends InstrumentedPreferenceActivity {
 
         return h + ":" + pad(m) + ":" + pad(s);
     }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        final int itemId = item.getItemId();
-        switch (itemId) {
-            case android.R.id.home:
-                goUpToTopLevelSetting(this);
-                return true;
-            default:
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     * Finish current Activity and go up to the top level Settings.
-     */
-    public static void goUpToTopLevelSetting(Activity activity) {
-        activity.finish();
-    }
-
 }

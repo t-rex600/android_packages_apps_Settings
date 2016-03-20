@@ -109,7 +109,7 @@
     <string name="bluetooth_disconnect_title" msgid="6026705382020027966">"Rozłączyć?"</string>
     <string name="bluetooth_disconnect_all_profiles" msgid="9148530542956217908">"Spowoduje to zakończenie połączenia z urządzeniem:&lt;br&gt;&lt;b&gt;<xliff:g id="DEVICE_NAME">%1$s</xliff:g>&lt;/b&gt;"</string>
     <string name="bluetooth_empty_list_user_restricted" msgid="603521233563983689">"Nie masz uprawnień, by zmienić ustawienia Bluetootha."</string>
-    <string name="bluetooth_is_visible_message" msgid="6222396240776971862">"Urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> jest widoczne na urządzenia w pobliżu, gdy ustawienia Bluetooth są otwarte."</string>
+    <string name="bluetooth_is_visible_message" msgid="6222396240776971862">"Urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> jest widoczne na urządzenia w pobliżu, gdy ustawienia Bluetooth są otwarte."</string>
     <string name="bluetooth_is_disconnect_question" msgid="5334933802445256306">"Odłączyć urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g>?"</string>
     <string name="bluetooth_broadcasting" msgid="16583128958125247">"Transmisja"</string>
     <string name="bluetooth_disable_profile_title" msgid="5916643979709342557">"Wyłączyć profil?"</string>
@@ -374,8 +374,8 @@
     <string name="crypt_keeper_encrypt_title" product="tablet" msgid="1060273569887301457">"Zaszyfruj tablet"</string>
     <string name="crypt_keeper_encrypt_title" product="default" msgid="1878996487755806122">"Zaszyfruj telefon"</string>
     <string name="crypt_keeper_encrypted_summary" msgid="1868233637888132906">"Zaszyfrowane"</string>
-    <string name="crypt_keeper_desc" product="tablet" msgid="503014594435731275">"Możesz zaszyfrować swoje konta, ustawienia, pobrane aplikacje wraz z danymi oraz pliki multimedialne i inne. Jeśli korzystasz z szyfrowania tabletu i masz na nim ustawione blokowanie ekranu (wykorzystujesz do tego wzór, kod PIN lub hasło), po każdym uruchomieniu urządzenia konieczne będzie odblokowanie ekranu, by odszyfrować dane. Jedynym innym sposobem odszyfrowania tabletu jest przywrócenie danych fabrycznych, co powoduje usunięcie wszystkich danych.\n\nSzyfrowanie trwa co najmniej godzinę. Przed jego rozpoczęciem naładuj baterię, a w trakcie nie odłączaj tabletu od zasilania. Przerwanie procesu szyfrowania spowoduje utratę części lub wszystkich danych."</string>
-    <string name="crypt_keeper_desc" product="default" msgid="2579929266645543631">"Możesz zaszyfrować swoje konta, ustawienia, pobrane aplikacje wraz z danymi oraz pliki multimedialne i inne. Jeśli korzystasz z szyfrowania telefonu i masz na nim ustawione blokowanie ekranu (wykorzystujesz do tego wzór, kod PIN lub hasło), po każdym uruchomieniu urządzenia konieczne będzie odblokowanie ekranu, by odszyfrować dane. Jedynym innym sposobem odszyfrowania telefonu jest przywrócenie danych fabrycznych, co powoduje wymazanie wszystkich danych.\n\nSzyfrowanie trwa co najmniej godzinę. Przed jego rozpoczęciem naładuj baterię, a w trakcie nie odłączaj telefonu od zasilania. Przerwanie procesu szyfrowania spowoduje utratę części lub wszystkich danych."</string>
+    <string name="crypt_keeper_desc" product="tablet" msgid="503014594435731275">"Możesz zaszyfrować swoje konta, ustawienia, pobrane aplikacje wraz z danymi oraz pliki multimedialne i inne. Jeśli korzystasz z szyfrowania tabletu i masz na nim ustawione blokowanie ekranu (wykorzystujesz do tego wzór, kod PIN lub hasło), po każdym uruchomieniu urządzenia konieczne będzie odblokowanie ekranu, by odszyfrować dane. Jedynym innym sposobem odszyfrowania tabletu jest przywrócenie danych fabrycznych, co powoduje usunięcie wszystkich danych.\n\nSzyfrowanie trwa co najmniej godzinę. Przed jego rozpoczęciem naładuj baterię, a w trakcie nie odłączaj tabletu od zasilania. Przerwanie procesu szyfrowania spowoduje utratę części lub wszystkich danych."</string>
+    <string name="crypt_keeper_desc" product="default" msgid="2579929266645543631">"Możesz zaszyfrować swoje konta, ustawienia, pobrane aplikacje wraz z danymi oraz pliki multimedialne i inne. Jeśli korzystasz z szyfrowania telefonu i masz na nim ustawione blokowanie ekranu (wykorzystujesz do tego wzór, kod PIN lub hasło), po każdym uruchomieniu urządzenia konieczne będzie odblokowanie ekranu, by odszyfrować dane. Jedynym innym sposobem odszyfrowania telefonu jest przywrócenie danych fabrycznych, co powoduje wymazanie wszystkich danych.\n\nSzyfrowanie trwa co najmniej godzinę. Przed jego rozpoczęciem naładuj baterię, a w trakcie nie odłączaj telefonu od zasilania. Przerwanie procesu szyfrowania spowoduje utratę części lub wszystkich danych."</string>
     <string name="crypt_keeper_button_text" product="tablet" msgid="1189623490604750854">"Zaszyfruj tablet"</string>
     <string name="crypt_keeper_button_text" product="default" msgid="2008346408473255519">"Zaszyfruj telefon"</string>
     <string name="crypt_keeper_low_charge_text" msgid="2029407131227814893">"Naładuj baterię i spróbuj ponownie."</string>
@@ -551,7 +551,7 @@
     <string name="bluetooth_device_context_connect_advanced" msgid="2643129703569788771">"Opcje…"</string>
     <string name="bluetooth_menu_advanced" msgid="8572178316357220524">"Zaawansowane"</string>
     <string name="bluetooth_advanced_titlebar" msgid="2142159726881547669">"Bluetooth – zaawansowane"</string>
-    <string name="bluetooth_empty_list_bluetooth_off" msgid="6351930724051893423">"Po włączeniu Bluetootha urządzenie może komunikować się z innymi urządzeniami Bluetooth w pobliżu."</string>
+    <string name="bluetooth_empty_list_bluetooth_off" msgid="6351930724051893423">"Po włączeniu Bluetootha urządzenie może komunikować się z innymi urządzeniami Bluetooth w pobliżu."</string>
     <string name="ble_scan_notify_text" msgid="1295915006005700650">"Aplikacje i usługi systemowe mogą nadal wykrywać urządzenia Bluetooth, by poprawić dokładność lokalizacji. Możesz to zmienić w <xliff:g id="LINK_BEGIN_0">LINK_BEGIN</xliff:g>ustawieniach skanowania<xliff:g id="LINK_END_1">LINK_END</xliff:g>."</string>
     <string name="bluetooth_connect_specific_profiles_title" msgid="6952214406025825164">"Połącz z siecią…"</string>
     <string name="bluetooth_disconnect_a2dp_profile" msgid="3524648279150937177">"Urządzenie <xliff:g id="DEVICE_NAME">%1$s</xliff:g> zostanie odłączone od funkcji audio multimediów."</string>
@@ -598,7 +598,7 @@
     <string name="android_beam_off_summary" msgid="4663095428454779138">"Wyłączona"</string>
     <string name="android_beam_disabled_summary" msgid="1737782116894793393">"Niedostępne przy wyłączonym NFC"</string>
     <string name="android_beam_label" msgid="6257036050366775040">"Android Beam"</string>
-    <string name="android_beam_explained" msgid="6981652347448777459">"Po włączeniu tej funkcji możesz przesyłać dane między urządzeniami z funkcją NFC, zbliżając oba aparaty do siebie. Możliwe jest na przykład przesłanie stron z przeglądarki, filmów z YouTube, kontaktów z telefonu itp.\n\nWystarczy zetknąć urządzenia ze sobą (najlepiej tyłem) i dotknąć ekranu. Aplikacja automatycznie określi, jakie dane chcesz przesłać."</string>
+    <string name="android_beam_explained" msgid="6981652347448777459">"Po włączeniu tej funkcji możesz przesyłać dane między urządzeniami z funkcją NFC, zbliżając oba aparaty do siebie. Możliwe jest na przykład przesłanie stron z przeglądarki, filmów z YouTube, kontaktów z telefonu itp.\n\nWystarczy zetknąć urządzenia ze sobą (najlepiej tyłem) i dotknąć ekranu. Aplikacja automatycznie określi, jakie dane chcesz przesłać."</string>
     <string name="nsd_quick_toggle_title" msgid="3125572815278848258">"Wykrywanie usług sieciowych"</string>
     <string name="nsd_quick_toggle_summary" msgid="155692215972781276">"Zezwól aplikacjom z innych urządzeń wykrywać aplikacje na tym urządzeniu"</string>
     <string name="wifi_quick_toggle_title" msgid="8850161330437693895">"Wi‑Fi"</string>
@@ -1008,7 +1008,7 @@
     <string name="storage_title_usb" msgid="679612779321689418">"Połączenie USB z komputerem"</string>
     <string name="usb_connection_category" msgid="7805945595165422882">"Połącz jako:"</string>
     <string name="usb_mtp_title" msgid="3399663424394065964">"Urządzenie multimedialne (MTP)"</string>
-    <string name="usb_mtp_summary" msgid="4617321473211391236">"Umożliwia przesyłanie plików multimedialnych w Windows lub przy użyciu aplikacji Android File Transfer (dostępna na www.android.com/filetransfer) w Mac OS."</string>
+    <string name="usb_mtp_summary" msgid="4617321473211391236">"Umożliwia przesyłanie plików multimedialnych w Windows lub przy użyciu aplikacji Android File Transfer (dostępna na www.android.com/filetransfer) w Mac OS."</string>
     <string name="usb_ptp_title" msgid="3852760810622389620">"Aparat (PTP)"</string>
     <string name="usb_ptp_summary" msgid="7406889433172511530">"Umożliwia przesyłanie zdjęć za pomocą oprogramowania aparatu, a także przesyłanie dowolnych plików na komputerach, które nie obsługują urządzeń MTP."</string>
     <string name="usb_midi_title" msgid="3069990264258413994">"MIDI"</string>
@@ -1127,8 +1127,8 @@
     <string name="reset_network_complete_toast" msgid="787829973559541880">"Ustawienia sieciowe zostały zresetowane"</string>
     <string name="device_reset_title" msgid="2384019005638768076">"Resetuj urządzenie"</string>
     <string name="master_clear_title" msgid="5907939616087039756">"Ustawienia fabryczne"</string>
-    <string name="master_clear_desc" product="tablet" msgid="9146059417023157222">"Zostaną usunięte wszystkie dane z "<b>"wewnętrznej pamięci"</b>" tabletu, w tym:\n\n"<li>"Dane konta Google"</li>\n<li>"Dane i ustawienia systemu oraz aplikacji"</li>\n<li>"Pobrane aplikacje"</li></string>
-    <string name="master_clear_desc" product="default" msgid="4800386183314202571">"Zostaną usunięte wszystkie dane z "<b>"wewnętrznej pamięci"</b>" telefonu, w tym:\n\n"<li>"Dane konta Google"</li>\n<li>"Dane i ustawienia systemu oraz aplikacji"</li>\n<li>"Pobrane aplikacje"</li></string>
+    <string name="master_clear_desc" product="tablet" msgid="9146059417023157222">"Zostaną usunięte wszystkie dane z "<b>"wewnętrznej pamięci"</b>" tabletu, w tym:\n\n"<li>"Dane konta Google"</li>\n<li>"Dane i ustawienia systemu oraz aplikacji"</li>\n<li>"Pobrane aplikacje"</li></string>
+    <string name="master_clear_desc" product="default" msgid="4800386183314202571">"Zostaną usunięte wszystkie dane z "<b>"wewnętrznej pamięci"</b>" telefonu, w tym:\n\n"<li>"Dane konta Google"</li>\n<li>"Dane i ustawienia systemu oraz aplikacji"</li>\n<li>"Pobrane aplikacje"</li></string>
     <string name="master_clear_accounts" product="default" msgid="6412857499147999073">\n\n"Zalogowano się na konta:\n"</string>
     <string name="master_clear_other_users_present" product="default" msgid="5161423070702470742">\n\n"Z tego urządzenia korzystają inni użytkownicy.\n"</string>
     <string name="master_clear_desc_also_erases_external" msgid="1903185203791274237"><li>"Muzyka"</li>\n<li>"Zdjęcia"</li>\n<li>"Inne dane użytkownika"</li></string>
@@ -1302,8 +1302,8 @@
     <string name="install_applications_title" msgid="4987712352256508946">"Zezwalaj na wszystkie źródła"</string>
     <string name="install_unknown_applications_title" msgid="663831043139080992">"Umożliwia instalowanie aplikacji ze źródeł innych niż Google Play"</string>
     <string name="install_unknown_applications" msgid="176855644862942064">"Zezwalaj na instalowanie aplikacji z nieznanych źródeł"</string>
-    <string name="install_all_warning" product="tablet" msgid="3263360446508268880">"Twój tablet i dane osobiste są bardziej narażone na ataki aplikacji z nieznanych źródeł. Akceptujesz fakt, że ponosisz wyłączną odpowiedzialność za wszelkie możliwe szkody w tablecie i utratę danych w wyniku korzystania z tych aplikacji."</string>
-    <string name="install_all_warning" product="default" msgid="8113734576826384682">"Twój telefon i Twoje dane są bardziej narażone na ataki aplikacji z nieznanych źródeł. Akceptujesz fakt, że ponosisz wyłączną odpowiedzialność za wszelkie możliwe szkody w telefonie i utratę danych w wyniku korzystania z tych aplikacji."</string>
+    <string name="install_all_warning" product="tablet" msgid="3263360446508268880">"Twój tablet i dane osobiste są bardziej narażone na ataki aplikacji z nieznanych źródeł. Akceptujesz fakt, że ponosisz wyłączną odpowiedzialność za wszelkie możliwe szkody w tablecie i utratę danych w wyniku korzystania z tych aplikacji."</string>
+    <string name="install_all_warning" product="default" msgid="8113734576826384682">"Twój telefon i Twoje dane są bardziej narażone na ataki aplikacji z nieznanych źródeł. Akceptujesz fakt, że ponosisz wyłączną odpowiedzialność za wszelkie możliwe szkody w telefonie i utratę danych w wyniku korzystania z tych aplikacji."</string>
     <string name="advanced_settings" msgid="1777249286757067969">"Ustawienia zaawansowane"</string>
     <string name="advanced_settings_summary" msgid="4016682978071086747">"Włącz więcej opcji ustawień."</string>
     <string name="application_info_label" msgid="5736524913065714880">"Informacje o aplikacji"</string>
@@ -1476,7 +1476,7 @@
     <string name="hardkeyboard_category" msgid="5957168411305769899">"Ustawienia klawiatury fizycznej"</string>
     <string name="auto_punctuate_summary" msgid="4372126865670574837">"Naciśnij dwukrotnie klawisz spacji, aby wstawić kropkę"</string>
     <string name="show_password" msgid="3001113966880559611">"Hasła są widoczne"</string>
-    <string name="ime_security_warning" msgid="4135828934735934248">"Ta metoda wprowadzania tekstu może gromadzić cały wpisywany tekst, w tym dane osobowe takie jak hasła czy numery kart kredytowych. Pochodzi ona z aplikacji <xliff:g id="IME_APPLICATION_NAME">%1$s</xliff:g>. Użyć jej?"</string>
+    <string name="ime_security_warning" msgid="4135828934735934248">"Ta metoda wprowadzania tekstu może gromadzić cały wpisywany tekst, w tym dane osobowe takie jak hasła czy numery kart kredytowych. Pochodzi ona z aplikacji <xliff:g id="IME_APPLICATION_NAME">%1$s</xliff:g>. Użyć jej?"</string>
     <string name="spellchecker_security_warning" msgid="9060897418527708922">"Ten moduł sprawdzania pisowni może gromadzić cały wpisywany tekst, w tym dane osobiste w postaci haseł i numerów kart kredytowych. Pochodzi on z aplikacji <xliff:g id="SPELLCHECKER_APPLICATION_NAME">%1$s</xliff:g>. Użyć go?"</string>
     <string name="spellchecker_quick_settings" msgid="246728645150092058">"Ustawienia"</string>
     <string name="spellchecker_language" msgid="6041050114690541437">"Język"</string>
@@ -1507,7 +1507,7 @@
     <string name="user_dict_settings_edit_dialog_title" msgid="8967476444840548674">"Edytuj słowo"</string>
     <string name="user_dict_settings_context_menu_edit_title" msgid="2210564879320004837">"Edytuj"</string>
     <string name="user_dict_settings_context_menu_delete_title" msgid="9140703913776549054">"Usuń"</string>
-    <string name="user_dict_settings_empty_text" msgid="996593969349827966">"Nie masz żadnych słów w słowniku użytkownika. Aby dodać słowo, wybierz Dodaj (+)."</string>
+    <string name="user_dict_settings_empty_text" msgid="996593969349827966">"Nie masz żadnych słów w słowniku użytkownika. Aby dodać słowo, wybierz Dodaj (+)."</string>
     <string name="user_dict_settings_all_languages" msgid="6742000040975959247">"Dla wszystkich języków"</string>
     <string name="user_dict_settings_more_languages" msgid="7316375944684977910">"Więcej języków..."</string>
     <string name="testing" msgid="6584352735303604146">"Testowanie"</string>
@@ -1617,7 +1617,7 @@
     <string name="accessibility_display_title" msgid="7610175687949675162">"Ekran"</string>
     <string name="accessibility_captioning_title" msgid="7589266662024836291">"Napisy"</string>
     <string name="accessibility_screen_magnification_title" msgid="7001782548715744981">"Gesty powiększania"</string>
-    <string name="accessibility_screen_magnification_summary" msgid="1178289000423776584">"Kiedy ta funkcja jest włączona, możesz powiększyć i pomniejszyć obraz, trzykrotnie klikając ekran.\n\nW trybie powiększenia możesz:\n"<ul><li>"Przesuwać: przeciągnij palcami po ekranie."</li>\n<li>"Regulować powiększenie: ściągnij lub rozsuń palce."</li></ul>\n\n"Możesz też tymczasowo powiększyć miejsce pod palcem, klikając trzykrotnie i przytrzymując palec na ekranie. W takim widoku „lupy” możesz przesuwać palcem po ekranie i powiększać różne miejsca. Podniesienie palca spowoduje powrót do poprzedniego widoku.\n\nUwaga: trzykrotne kliknięcie powiększające działa wszędzie poza klawiaturą i paskiem nawigacji."</string>
+    <string name="accessibility_screen_magnification_summary" msgid="1178289000423776584">"Kiedy ta funkcja jest włączona, możesz powiększyć i pomniejszyć obraz, trzykrotnie klikając ekran.\n\nW trybie powiększenia możesz:\n"<ul><li>"Przesuwać: przeciągnij palcami po ekranie."</li>\n<li>"Regulować powiększenie: ściągnij lub rozsuń palce."</li></ul>\n\n"Możesz też tymczasowo powiększyć miejsce pod palcem, klikając trzykrotnie i przytrzymując palec na ekranie. W takim widoku „lupy” możesz przesuwać palcem po ekranie i powiększać różne miejsca. Podniesienie palca spowoduje powrót do poprzedniego widoku.\n\nUwaga: trzykrotne kliknięcie powiększające działa wszędzie poza klawiaturą i paskiem nawigacji."</string>
     <string name="accessibility_global_gesture_preference_title" msgid="6752037184140789970">"Skrót ułatwień dostępu"</string>
     <string name="accessibility_global_gesture_preference_summary_on" msgid="6180927399052022181">"Wł."</string>
     <string name="accessibility_global_gesture_preference_summary_off" msgid="8102103337813609849">"Wył."</string>
@@ -1989,7 +1989,7 @@
     <string name="local_backup_password_toast_confirmation_mismatch" msgid="7805892532752708288">"Nowe hasła nie pasują do siebie"</string>
     <string name="local_backup_password_toast_validation_failure" msgid="5646377234895626531">"Nie udało się ustawić hasła kopii zapasowej"</string>
     <string name="backup_erase_dialog_title" msgid="1027640829482174106"></string>
-    <string name="backup_erase_dialog_message" msgid="5221011285568343155">"Zatrzymać tworzenie kopii zapasowych haseł Wi-Fi, zakładek, innych ustawień i danych aplikacji, a także usunąć wszystkie kopie z serwerów Google?"</string>
+    <string name="backup_erase_dialog_message" msgid="5221011285568343155">"Zatrzymać tworzenie kopii zapasowych haseł Wi-Fi, zakładek, innych ustawień i danych aplikacji, a także usunąć wszystkie kopie z serwerów Google?"</string>
     <string name="fullbackup_erase_dialog_message" msgid="944399039066318647">"Zatrzymać tworzenie kopii zapasowej danych urządzenia (np. haseł Wi-Fi i historii połączeń) i danych aplikacji (np. ustawień i plików zapisanych przez aplikacje) oraz wykasować wszystkie kopie z Dysku Google?"</string>
     <string name="fullbackup_data_summary" msgid="960850365007767734">"Automatycznie twórz zdalną kopię zapasową danych urządzenia (np. haseł Wi-Fi i historii połączeń) oraz danych aplikacji (np. ustawień i plików zapisanych przez aplikacje).\n\nKiedy włączysz automatyczną kopię zapasową, dane urządzenia i aplikacji będą regularnie zapisywane zdalnie. Dane aplikacji mogą obejmować dowolne informacje zapisane przez aplikację (w zależności od ustawień określonych przez programistę) – w tym potencjalnie poufne dane takie jak kontakty, wiadomości i zdjęcia."</string>
     <string name="device_admin_settings_title" msgid="1335557832906433309">"Ustawienia administracji"</string>

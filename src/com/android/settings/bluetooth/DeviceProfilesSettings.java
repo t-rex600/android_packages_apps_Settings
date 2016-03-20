@@ -62,10 +62,9 @@ public final class DeviceProfilesSettings extends DialogFragment implements
     private CachedBluetoothDevice mCachedDevice;
     private LocalBluetoothManager mManager;
     private LocalBluetoothProfileManager mProfileManager;
+
     private ViewGroup mProfileContainer;
     private TextView mProfileLabel;
-    private static final int OK_BUTTON = -1;
-
     private EditTextPreference mDeviceNamePref;
 
     private final HashMap<LocalBluetoothProfile, CheckBoxPreference> mAutoConnectPrefs
@@ -232,10 +231,7 @@ public final class DeviceProfilesSettings extends DialogFragment implements
     public void onClick(View v) {
         if (v instanceof CheckBox) {
             LocalBluetoothProfile prof = getProfileOf(v);
-            if (prof != null)
-                onProfileClicked(prof, (CheckBox) v);
-            else
-                Log.e(TAG, "Error: Can't get the profile for the preference");
+            onProfileClicked(prof, (CheckBox) v);
         }
     }
 
@@ -292,11 +288,8 @@ public final class DeviceProfilesSettings extends DialogFragment implements
         DialogInterface.OnClickListener disconnectListener =
                 new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                // Disconnect only when user has selected OK
-                if (which == OK_BUTTON) {
-                    device.disconnect(profile);
-                    profile.setPreferred(device.getDevice(), false);
-                }
+                device.disconnect(profile);
+                profile.setPreferred(device.getDevice(), false);
                 if (profile instanceof MapProfile) {
                     device.setMessagePermissionChoice(BluetoothDevice.ACCESS_REJECTED);
                 }

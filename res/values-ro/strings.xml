@@ -1192,7 +1192,7 @@
     <string name="location_category_recent_location_requests" msgid="1938721350424447421">"Solicitări recente de localiz."</string>
     <string name="location_no_recent_apps" msgid="2800907699722178041">"Nicio aplicație nu a solicitat locația recent"</string>
     <string name="location_category_location_services" msgid="7437150886946685979">"Servicii de localizare"</string>
-    <string name="location_high_battery_use" msgid="517199943258508020">"Utilizare intensă a bateriei"</string>
+    <string name="location_high_battery_use" msgid="517199943258508020">"Utilizare intensă a bateriei"</string>
     <string name="location_low_battery_use" msgid="8602232529541903596">"Utilizare redusă a bateriei"</string>
     <string name="location_mode_screen_title" msgid="4528716772270246542">"Mod de localizare"</string>
     <string name="location_mode_high_accuracy_description" msgid="5703350404315028607">"Utilizează GPS, Wi-Fi, Bluetooth sau rețelele mobile pentru determinarea locației"</string>
@@ -1264,7 +1264,7 @@
     <string name="lockpattern_recording_intro_header" msgid="308287052221942814">"Desenați un model pentru deblocare"</string>
     <string name="lockpattern_recording_intro_footer" msgid="1118579101409152113">"Apăsați pe Meniu pentru ajutor."</string>
     <string name="lockpattern_recording_inprogress" msgid="6667844062721656773">"Ridicaţi degetul când aţi terminat"</string>
-    <string name="lockpattern_recording_incorrect_too_short" msgid="1348234155120957561">"Conectaţi cel puțin <xliff:g id="NUMBER">%d</xliff:g> puncte. Încercați din nou."</string>
+    <string name="lockpattern_recording_incorrect_too_short" msgid="1348234155120957561">"Conectaţi cel puțin <xliff:g id="NUMBER">%d</xliff:g> puncte. Încercați din nou."</string>
     <string name="lockpattern_pattern_entered_header" msgid="4316818983675591604">"Model înregistrat"</string>
     <string name="lockpattern_need_to_confirm" msgid="8054853451639221265">"Desenați din nou pentru a confirma"</string>
     <string name="lockpattern_pattern_confirmed_header" msgid="8455614172231880211">"Noul dvs. model pentru deblocare"</string>
@@ -1817,7 +1817,7 @@
     <string name="battery_saver_turn_on_automatically_never" msgid="6610846456314373">"Niciodată"</string>
     <string name="battery_saver_turn_on_automatically_pct" msgid="7536784431655058267">"când bateria ajunge la %1$s"</string>
     <string name="process_stats_summary_title" msgid="1144688045609771677">"Statistici de proces"</string>
-    <string name="process_stats_summary" msgid="109387941605607762">"Statistici inteligente despre procesele care rulează"</string>
+    <string name="process_stats_summary" msgid="109387941605607762">"Statistici inteligente despre procesele care rulează"</string>
     <string name="app_memory_use" msgid="7849258480392171939">"Utilizarea memoriei"</string>
     <string name="process_stats_total_duration" msgid="7417201400853728029">"<xliff:g id="USEDRAM">%1$s</xliff:g> din <xliff:g id="TOTALRAM">%2$s</xliff:g> folosiți în <xliff:g id="TIMEDURATION">%3$s</xliff:g>"</string>
     <string name="process_stats_total_duration_percentage" msgid="6522457033380025618">"<xliff:g id="PERCENT">%1$s</xliff:g> din RAM folosit în <xliff:g id="TIMEDURATION">%2$s</xliff:g>"</string>
