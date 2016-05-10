@@ -108,18 +108,6 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAutoBrightnessPreference;
     private SwitchPreference mCameraGesturePreference;
     private SwitchPreference mCameraDoubleTapPowerGesturePreference;
-
-<<<<<<< HEAD
-=======
-    private SwitchPreference mTapToWake;
-    private SwitchPreference mWakeWhenPluggedOrUnplugged;
-    
-    private static final String ROTATION_ANGLE_0 = "0";
-    private static final String ROTATION_ANGLE_90 = "90";
-    private static final String ROTATION_ANGLE_180 = "180";
-    private static final String ROTATION_ANGLE_270 = "270";
-
->>>>>>> a15c676... Configurable 0, 90, 180 and 270 degree rotation [2/2]
     private ContentObserver mAccelerometerRotationObserver =
             new ContentObserver(new Handler()) {
         @Override
@@ -373,16 +361,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     @Override
     public void onResume() {
         super.onResume();
-
-        // Default value for wake-on-plug behavior from config.xml
-        boolean wakeUpWhenPluggedOrUnpluggedConfig = getResources().getBoolean(
-                com.android.internal.R.bool.config_unplugTurnsOnScreen);
-
-        mWakeWhenPluggedOrUnplugged.setChecked(Settings.Global.getInt(getContentResolver(),
-                Settings.Global.WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
-                (wakeUpWhenPluggedOrUnpluggedConfig ? 1 : 0)) == 1);
-
-        updateState();
+       updateState();
         getContentResolver().registerContentObserver(
                 Settings.System.getUriFor(Settings.System.ACCELEROMETER_ROTATION), true,
                 mAccelerometerRotationObserver);
