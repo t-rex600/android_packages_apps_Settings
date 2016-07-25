@@ -101,7 +101,7 @@
                 android:summary="@string/proximity_wake_summary"
                 android:defaultValue="false" />
 
-        <com.android.settings.WarnedListPreference
+         <com.android.settings.FontDialogPreference
                 android:key="font_size"
                 android:title="@string/title_font_size"
                 settings:keywords="@string/keywords_display_font_size"
